@@ -1,0 +1,8 @@
+node_modules
+.next
+.pnpm-store
+reference
+pnpm-lock.yaml
+src/data/demo/fixtures.json
+docs/CONTEXTO-PROYECTO.md
+public

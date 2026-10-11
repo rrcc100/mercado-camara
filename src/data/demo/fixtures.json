@@ -1,0 +1,1668 @@
+{
+  "institutions": [
+    {
+      "id": "horizonte",
+      "slug": "horizonte",
+      "name": "Instituto Horizonte",
+      "description": "Formación práctica en herramientas digitales y gestión, con acompañamiento docente y proyectos aplicados.",
+      "specialty": "Tecnología y gestión",
+      "city": "CABA",
+      "province": "CABA",
+      "logo": "/assets/institute-horizonte.webp",
+      "socials": [],
+      "website": null,
+      "demo": true,
+      "assessment": {
+        "level": "REFERENCE",
+        "stage": "ESTABLISHED",
+        "reviewedAt": null,
+        "methodologyVersion": "demo-progresiva-borrador",
+        "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+      },
+      "foundedYear": 2012,
+      "memberSince": null
+    },
+    {
+      "id": "aula-sur",
+      "slug": "aula-sur",
+      "name": "Aula Sur Formación",
+      "description": "Cursos orientados a desarrollar habilidades para el trabajo y la gestión de pequeños negocios.",
+      "specialty": "Administración y negocios",
+      "city": "La Plata",
+      "province": "Buenos Aires",
+      "logo": "/assets/institute-aula-sur.webp",
+      "socials": [],
+      "website": null,
+      "demo": true,
+      "assessment": {
+        "level": "DISTINCTION",
+        "stage": "EARLY",
+        "reviewedAt": null,
+        "methodologyVersion": "demo-progresiva-borrador",
+        "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+      },
+      "foundedYear": 2017,
+      "memberSince": null
+    },
+    {
+      "id": "nexo",
+      "slug": "nexo",
+      "name": "Nexo Escuela Digital",
+      "description": "Aprendizaje digital a través de talleres, ejercicios guiados y proyectos de portfolio.",
+      "specialty": "Tecnología y comunicación",
+      "city": "Córdoba",
+      "province": "Córdoba",
+      "logo": "/assets/institute-nexo.webp",
+      "socials": [],
+      "website": null,
+      "demo": true,
+      "assessment": {
+        "level": "DISTINCTION",
+        "stage": "EARLY",
+        "reviewedAt": null,
+        "methodologyVersion": "demo-progresiva-borrador",
+        "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+      },
+      "foundedYear": 2020,
+      "memberSince": null
+    },
+    {
+      "id": "oficios",
+      "slug": "oficios",
+      "name": "Centro de Oficios del Río",
+      "description": "Formación en oficios con prácticas de taller y recorridos progresivos de aprendizaje.",
+      "specialty": "Oficios y servicios",
+      "city": "Rosario",
+      "province": "Santa Fe",
+      "logo": "/assets/institute-oficios.webp",
+      "socials": [],
+      "website": null,
+      "demo": true,
+      "assessment": {
+        "level": "SOLIDITY",
+        "stage": "ESTABLISHED",
+        "reviewedAt": null,
+        "methodologyVersion": "demo-progresiva-borrador",
+        "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+      },
+      "foundedYear": 2015,
+      "memberSince": null
+    },
+    {
+      "id": "puentes",
+      "slug": "puentes",
+      "name": "Instituto Puentes",
+      "description": "Una institución que está incorporando su propuesta y documentando su actividad en la red.",
+      "specialty": "Idiomas y habilidades",
+      "city": "Mendoza",
+      "province": "Mendoza",
+      "logo": "/assets/institute-puentes.webp",
+      "socials": [],
+      "website": null,
+      "demo": true,
+      "assessment": {
+        "level": "PENDING",
+        "stage": "PENDING",
+        "reviewedAt": null,
+        "methodologyVersion": "demo-progresiva-borrador",
+        "rationale": "La evidencia aún está en revisión. No implica una valoración negativa."
+      },
+      "foundedYear": 2025,
+      "memberSince": null
+    },
+    {
+      "id": "taller",
+      "slug": "taller",
+      "name": "Taller Abierto Formación",
+      "description": "Una propuesta de talleres de servicios y comunicación que está fortaleciendo su información y acompañamiento.",
+      "specialty": "Comunicación y servicios",
+      "city": "Mar del Plata",
+      "province": "Buenos Aires",
+      "logo": "/assets/institute-taller.webp",
+      "socials": [],
+      "website": null,
+      "demo": true,
+      "assessment": {
+        "level": "BASE",
+        "stage": "EARLY",
+        "reviewedAt": null,
+        "methodologyVersion": "demo-progresiva-borrador",
+        "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+      },
+      "foundedYear": 2023,
+      "memberSince": null
+    }
+  ],
+  "courses": [
+    {
+      "id": "excel-horizonte",
+      "slug": "excel-horizonte",
+      "title": "Excel para el trabajo",
+      "category": "tecnologia",
+      "institution": {
+        "id": "horizonte",
+        "slug": "horizonte",
+        "name": "Instituto Horizonte",
+        "description": "Formación práctica en herramientas digitales y gestión, con acompañamiento docente y proyectos aplicados.",
+        "specialty": "Tecnología y gestión",
+        "city": "CABA",
+        "province": "CABA",
+        "logo": "/assets/institute-horizonte.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "REFERENCE",
+          "stage": "ESTABLISHED",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2012,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONLINE",
+      "hours": 40,
+      "weeks": 8,
+      "price": 58000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Organizá datos, creá fórmulas y construí reportes útiles para tu trabajo.",
+      "modules": [
+        {
+          "id": "demo-excel-horizonte-0",
+          "title": "Planillas y organización de datos",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-excel-horizonte-1",
+          "title": "Fórmulas y funciones",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-excel-horizonte-2",
+          "title": "Tablas dinámicas y gráficos",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-excel-horizonte-3",
+          "title": "Proyecto de aplicación",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Desarrollar autonomía en el uso de Excel para organizar información, resolver cálculos y elaborar reportes en el ámbito laboral.",
+      "audience": [
+        "Personas que buscan incorporar Excel a su trabajo.",
+        "Asistentes administrativos que trabajan con planillas.",
+        "Emprendedores que necesitan organizar información de su actividad."
+      ],
+      "outcomes": [
+        "Construir un reporte de ventas con tablas dinámicas.",
+        "Automatizar cálculos habituales con fórmulas.",
+        "Organizar y presentar datos de una planilla."
+      ],
+      "skills": [
+        "Excel",
+        "Tablas dinámicas",
+        "Reportes"
+      ],
+      "project": "Un reporte de ventas con fórmulas, tabla dinámica y gráficos.",
+      "evaluation": "Entrega de una planilla y explicación de los cálculos utilizados.",
+      "prerequisites": "Manejo básico de archivos y computadora. No necesitás experiencia previa con Excel.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": {
+        "youtubeId": "lgIWIPDJuPo",
+        "title": "Excel: Getting Started",
+        "author": "LearnFree",
+        "demo": true
+      },
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Tecnología",
+      "location": null
+    },
+    {
+      "id": "excel-aula",
+      "slug": "excel-aula",
+      "title": "Excel y gestión administrativa",
+      "category": "administracion",
+      "institution": {
+        "id": "aula-sur",
+        "slug": "aula-sur",
+        "name": "Aula Sur Formación",
+        "description": "Cursos orientados a desarrollar habilidades para el trabajo y la gestión de pequeños negocios.",
+        "specialty": "Administración y negocios",
+        "city": "La Plata",
+        "province": "Buenos Aires",
+        "logo": "/assets/institute-aula-sur.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "DISTINCTION",
+          "stage": "EARLY",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2017,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONLINE",
+      "hours": 32,
+      "weeks": 8,
+      "price": 42000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Aplicá Excel a tareas administrativas, presupuestos y seguimiento de operaciones.",
+      "modules": [
+        {
+          "id": "demo-excel-aula-0",
+          "title": "Herramientas de Excel",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-excel-aula-1",
+          "title": "Registros administrativos",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-excel-aula-2",
+          "title": "Presupuestos",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-excel-aula-3",
+          "title": "Reportes de gestión",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Incorporar herramientas de Excel para registrar operaciones, controlar presupuestos y acompañar la gestión administrativa de un negocio.",
+      "audience": [
+        "Personas que se inician en tareas administrativas.",
+        "Integrantes de pequeños negocios que gestionan ingresos y gastos.",
+        "Trabajadores que quieren mejorar sus registros y reportes de gestión."
+      ],
+      "outcomes": [
+        "Armar una planilla de ingresos, gastos y presupuesto.",
+        "Ordenar registros administrativos con filtros.",
+        "Preparar un resumen mensual para la gestión."
+      ],
+      "skills": [
+        "Excel",
+        "Presupuestos",
+        "Administración"
+      ],
+      "project": "Una planilla de presupuesto y seguimiento de gastos de un negocio.",
+      "evaluation": "Resolución de un caso administrativo y entrega de la planilla.",
+      "prerequisites": "Manejo básico de computadora. Podés empezar sin conocimientos de Excel.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": {
+        "youtubeId": "lgIWIPDJuPo",
+        "title": "Excel: Getting Started",
+        "author": "LearnFree",
+        "demo": true
+      },
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Administración",
+      "location": null
+    },
+    {
+      "id": "marketing-nexo",
+      "slug": "marketing-nexo",
+      "title": "Marketing digital y redes sociales",
+      "category": "comunicacion",
+      "institution": {
+        "id": "nexo",
+        "slug": "nexo",
+        "name": "Nexo Escuela Digital",
+        "description": "Aprendizaje digital a través de talleres, ejercicios guiados y proyectos de portfolio.",
+        "specialty": "Tecnología y comunicación",
+        "city": "Córdoba",
+        "province": "Córdoba",
+        "logo": "/assets/institute-nexo.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "DISTINCTION",
+          "stage": "EARLY",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2020,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONLINE",
+      "hours": 60,
+      "weeks": 12,
+      "price": 89000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Diseñá una estrategia de contenidos y aprendé a medir sus resultados.",
+      "modules": [
+        {
+          "id": "demo-marketing-nexo-0",
+          "title": "Estrategia digital",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-marketing-nexo-1",
+          "title": "Contenido y redes sociales",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-marketing-nexo-2",
+          "title": "Campañas y audiencias",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-marketing-nexo-3",
+          "title": "Medición de resultados",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Comprender cómo planificar una estrategia de marketing digital y conectar los contenidos, las audiencias y la medición con los objetivos de una marca.",
+      "audience": [
+        "Emprendedores que quieren dar a conocer su marca.",
+        "Personas que desean iniciarse en marketing digital.",
+        "Responsables de comunicación que buscan organizar sus acciones en redes."
+      ],
+      "outcomes": [
+        "Diseñar un plan de contenidos para una marca.",
+        "Definir audiencias y objetivos de una campaña.",
+        "Interpretar métricas para ajustar una estrategia digital."
+      ],
+      "skills": [
+        "Marketing digital",
+        "Contenidos",
+        "Métricas"
+      ],
+      "project": "Un plan de campaña con audiencia, calendario e indicadores de seguimiento.",
+      "evaluation": "Presentación del plan y justificación de las decisiones de comunicación.",
+      "prerequisites": "Uso habitual de redes sociales. No requiere experiencia en marketing.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Comunicación",
+      "location": null
+    },
+    {
+      "id": "sueldos-aula",
+      "slug": "sueldos-aula",
+      "title": "Liquidación de sueldos",
+      "category": "administracion",
+      "institution": {
+        "id": "aula-sur",
+        "slug": "aula-sur",
+        "name": "Aula Sur Formación",
+        "description": "Cursos orientados a desarrollar habilidades para el trabajo y la gestión de pequeños negocios.",
+        "specialty": "Administración y negocios",
+        "city": "La Plata",
+        "province": "Buenos Aires",
+        "logo": "/assets/institute-aula-sur.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "DISTINCTION",
+          "stage": "EARLY",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2017,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "HYBRID",
+      "hours": 48,
+      "weeks": 12,
+      "price": 76000,
+      "currency": "ARS",
+      "difficulty": "Intermedio",
+      "description": "Practicá la confección de recibos y el cálculo de conceptos salariales.",
+      "modules": [
+        {
+          "id": "demo-sueldos-aula-0",
+          "title": "Conceptos remunerativos",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-sueldos-aula-1",
+          "title": "Cálculo de haberes",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-sueldos-aula-2",
+          "title": "Descuentos y aportes",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-sueldos-aula-3",
+          "title": "Práctica de liquidación",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Desarrollar criterios y herramientas para comprender una liquidación de sueldos y practicar la elaboración y revisión de recibos mediante casos guiados.",
+      "audience": [
+        "Personal administrativo que colabora con la liquidación de haberes.",
+        "Asistentes de Recursos Humanos que buscan ampliar sus herramientas.",
+        "Estudiantes de áreas administrativas con conocimientos básicos de planillas."
+      ],
+      "outcomes": [
+        "Confeccionar un recibo de sueldo sobre un caso guiado.",
+        "Distinguir conceptos remunerativos y descuentos.",
+        "Revisar los cálculos de una liquidación simulada."
+      ],
+      "skills": [
+        "Liquidación de sueldos",
+        "Recibos",
+        "Administración"
+      ],
+      "project": "Una liquidación simulada con recibo y detalle de cálculo.",
+      "evaluation": "Resolución de casos y revisión de la documentación generada.",
+      "prerequisites": "Conocimientos básicos de administración y uso de planillas.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Administración",
+      "location": null
+    },
+    {
+      "id": "electricidad-rio",
+      "slug": "electricidad-rio",
+      "title": "Electricidad domiciliaria",
+      "category": "oficios",
+      "institution": {
+        "id": "oficios",
+        "slug": "oficios",
+        "name": "Centro de Oficios del Río",
+        "description": "Formación en oficios con prácticas de taller y recorridos progresivos de aprendizaje.",
+        "specialty": "Oficios y servicios",
+        "city": "Rosario",
+        "province": "Santa Fe",
+        "logo": "/assets/institute-oficios.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "SOLIDITY",
+          "stage": "ESTABLISHED",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2015,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONSITE",
+      "hours": 96,
+      "weeks": 24,
+      "price": 125000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Aprendé fundamentos de instalaciones y seguridad mediante prácticas de taller.",
+      "modules": [
+        {
+          "id": "demo-electricidad-rio-0",
+          "title": "Herramientas y seguridad",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-electricidad-rio-1",
+          "title": "Circuitos eléctricos",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-electricidad-rio-2",
+          "title": "Instalaciones básicas",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-electricidad-rio-3",
+          "title": "Práctica supervisada",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Introducir los fundamentos de la electricidad domiciliaria y los procedimientos de seguridad mediante el uso de herramientas y prácticas supervisadas.",
+      "audience": [
+        "Personas interesadas en iniciarse en el oficio de electricista.",
+        "Ayudantes de mantenimiento que buscan una base técnica.",
+        "Personas que desean comprender instalaciones domiciliarias en un entorno de práctica."
+      ],
+      "outcomes": [
+        "Interpretar un circuito eléctrico domiciliario básico.",
+        "Reconocer herramientas y medidas de seguridad.",
+        "Montar un circuito de práctica con supervisión."
+      ],
+      "skills": [
+        "Circuitos",
+        "Seguridad",
+        "Práctica de taller"
+      ],
+      "project": "Un circuito didáctico montado y verificado en el taller.",
+      "evaluation": "Práctica supervisada y comprobación de procedimientos de seguridad.",
+      "prerequisites": "No requiere experiencia técnica previa. Las prácticas se realizan con supervisión.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/technical-workshop.webp",
+      "coverAlt": "Escena ilustrativa de una práctica de taller",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Oficios",
+      "location": null
+    },
+    {
+      "id": "ingles-puentes",
+      "slug": "ingles-puentes",
+      "title": "Inglés para atención al público",
+      "category": "idiomas",
+      "institution": {
+        "id": "puentes",
+        "slug": "puentes",
+        "name": "Instituto Puentes",
+        "description": "Una institución que está incorporando su propuesta y documentando su actividad en la red.",
+        "specialty": "Idiomas y habilidades",
+        "city": "Mendoza",
+        "province": "Mendoza",
+        "logo": "/assets/institute-puentes.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "PENDING",
+          "stage": "PENDING",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "La evidencia aún está en revisión. No implica una valoración negativa."
+        },
+        "foundedYear": 2025,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONLINE",
+      "hours": 36,
+      "weeks": 12,
+      "price": 45000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Desarrollá recursos de conversación para situaciones de atención y servicio.",
+      "modules": [
+        {
+          "id": "demo-ingles-puentes-0",
+          "title": "Presentaciones",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-ingles-puentes-1",
+          "title": "Consultas habituales",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-ingles-puentes-2",
+          "title": "Resolución de situaciones",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-ingles-puentes-3",
+          "title": "Práctica conversacional",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Desarrollar recursos de comunicación en inglés para brindar información, comprender consultas y desenvolverse en situaciones habituales de atención al público.",
+      "audience": [
+        "Personas que trabajan en comercios y servicios.",
+        "Recepcionistas y asistentes de atención al público.",
+        "Personas que buscan prepararse para tareas de atención con uso de inglés."
+      ],
+      "outcomes": [
+        "Atender una consulta sencilla de un cliente en inglés.",
+        "Dar indicaciones e información de un servicio.",
+        "Practicar respuestas para situaciones habituales de atención."
+      ],
+      "skills": [
+        "Inglés",
+        "Conversación",
+        "Atención al público"
+      ],
+      "project": "Una simulación de atención al público con situaciones de consulta y respuesta.",
+      "evaluation": "Conversación guiada y actividades de comprensión.",
+      "prerequisites": "No requiere experiencia laboral previa. El instituto confirma el nivel de ingreso.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Idiomas",
+      "location": null
+    },
+    {
+      "id": "datos-horizonte",
+      "slug": "datos-horizonte",
+      "title": "Análisis de datos con Power BI",
+      "category": "tecnologia",
+      "institution": {
+        "id": "horizonte",
+        "slug": "horizonte",
+        "name": "Instituto Horizonte",
+        "description": "Formación práctica en herramientas digitales y gestión, con acompañamiento docente y proyectos aplicados.",
+        "specialty": "Tecnología y gestión",
+        "city": "CABA",
+        "province": "CABA",
+        "logo": "/assets/institute-horizonte.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "REFERENCE",
+          "stage": "ESTABLISHED",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2012,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONLINE",
+      "hours": 48,
+      "weeks": 12,
+      "price": 98000,
+      "currency": "ARS",
+      "difficulty": "Intermedio",
+      "description": "Convertí datos en reportes visuales que ayuden a tomar decisiones.",
+      "modules": [
+        {
+          "id": "demo-datos-horizonte-0",
+          "title": "Preparación de datos",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-datos-horizonte-1",
+          "title": "Modelado",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-datos-horizonte-2",
+          "title": "Visualización",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-datos-horizonte-3",
+          "title": "Proyecto de tablero",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Incorporar un proceso de análisis de datos con Power BI, desde la preparación de la información hasta la comunicación de indicadores para la gestión.",
+      "audience": [
+        "Personas que elaboran reportes con planillas y quieren avanzar en visualización.",
+        "Equipos administrativos o comerciales que trabajan con indicadores.",
+        "Analistas que buscan iniciarse en el uso de Power BI."
+      ],
+      "outcomes": [
+        "Crear un tablero interactivo de ventas con Power BI.",
+        "Preparar y relacionar tablas para analizarlas.",
+        "Elegir gráficos que respondan preguntas de negocio."
+      ],
+      "skills": [
+        "Power BI",
+        "Visualización",
+        "Análisis de datos"
+      ],
+      "project": "Un tablero con indicadores, filtros y visualizaciones sobre datos de ejemplo.",
+      "evaluation": "Entrega del tablero y presentación de las conclusiones del análisis.",
+      "prerequisites": "Manejo de planillas y conocimientos básicos de tablas y fórmulas.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Tecnología",
+      "location": null
+    },
+    {
+      "id": "programacion-nexo",
+      "slug": "programacion-nexo",
+      "title": "Introducción a la programación",
+      "category": "tecnologia",
+      "institution": {
+        "id": "nexo",
+        "slug": "nexo",
+        "name": "Nexo Escuela Digital",
+        "description": "Aprendizaje digital a través de talleres, ejercicios guiados y proyectos de portfolio.",
+        "specialty": "Tecnología y comunicación",
+        "city": "Córdoba",
+        "province": "Córdoba",
+        "logo": "/assets/institute-nexo.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "DISTINCTION",
+          "stage": "EARLY",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2020,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONLINE",
+      "hours": 72,
+      "weeks": 16,
+      "price": 112000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Desarrollá pensamiento lógico y construí tus primeros programas.",
+      "modules": [
+        {
+          "id": "demo-programacion-nexo-0",
+          "title": "Lógica y algoritmos",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-programacion-nexo-1",
+          "title": "Variables y estructuras",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-programacion-nexo-2",
+          "title": "Funciones",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-programacion-nexo-3",
+          "title": "Proyecto integrador",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Desarrollar pensamiento lógico y comprender los fundamentos de la programación para resolver problemas sencillos mediante código.",
+      "audience": [
+        "Personas que quieren dar sus primeros pasos en programación.",
+        "Estudiantes interesados en explorar el desarrollo de software.",
+        "Trabajadores que buscan comprender cómo automatizar tareas sencillas."
+      ],
+      "outcomes": [
+        "Construir un programa sencillo que resuelva una tarea.",
+        "Usar variables, condiciones y repeticiones.",
+        "Separar un problema en funciones y probar su solución."
+      ],
+      "skills": [
+        "Programación",
+        "Lógica",
+        "Funciones"
+      ],
+      "project": "Un programa de registro y consulta de datos de ejemplo.",
+      "evaluation": "Entrega del código, pruebas de funcionamiento y explicación de la solución.",
+      "prerequisites": "Manejo básico de computadora. No requiere haber programado.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Tecnología",
+      "location": null
+    },
+    {
+      "id": "refrigeracion-rio",
+      "slug": "refrigeracion-rio",
+      "title": "Refrigeración y aire acondicionado",
+      "category": "oficios",
+      "institution": {
+        "id": "oficios",
+        "slug": "oficios",
+        "name": "Centro de Oficios del Río",
+        "description": "Formación en oficios con prácticas de taller y recorridos progresivos de aprendizaje.",
+        "specialty": "Oficios y servicios",
+        "city": "Rosario",
+        "province": "Santa Fe",
+        "logo": "/assets/institute-oficios.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "SOLIDITY",
+          "stage": "ESTABLISHED",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2015,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONSITE",
+      "hours": 80,
+      "weeks": 20,
+      "price": 132000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Conocé los componentes, el mantenimiento y el diagnóstico de equipos.",
+      "modules": [
+        {
+          "id": "demo-refrigeracion-rio-0",
+          "title": "Principios de refrigeración",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-refrigeracion-rio-1",
+          "title": "Componentes",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-refrigeracion-rio-2",
+          "title": "Mantenimiento",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-refrigeracion-rio-3",
+          "title": "Diagnóstico en taller",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Comprender el funcionamiento básico de equipos de refrigeración y aire acondicionado e iniciarse en procedimientos de revisión y mantenimiento supervisados.",
+      "audience": [
+        "Personas interesadas en iniciarse en refrigeración.",
+        "Ayudantes de mantenimiento que buscan conocer estos equipos.",
+        "Personas que quieren explorar un oficio técnico mediante prácticas de taller."
+      ],
+      "outcomes": [
+        "Identificar los componentes de un equipo de refrigeración.",
+        "Realizar una revisión guiada de mantenimiento.",
+        "Reconocer síntomas de fallas sobre equipos de práctica."
+      ],
+      "skills": [
+        "Refrigeración",
+        "Mantenimiento",
+        "Diagnóstico"
+      ],
+      "project": "Una ficha de revisión y diagnóstico de un equipo de taller.",
+      "evaluation": "Actividad supervisada y registro de los pasos de revisión.",
+      "prerequisites": "No requiere experiencia en refrigeración. Las prácticas se realizan con supervisión.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/technical-workshop.webp",
+      "coverAlt": "Escena ilustrativa de una práctica de taller",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Oficios",
+      "location": null
+    },
+    {
+      "id": "rrhh-horizonte",
+      "slug": "rrhh-horizonte",
+      "title": "Asistente de Recursos Humanos",
+      "category": "administracion",
+      "institution": {
+        "id": "horizonte",
+        "slug": "horizonte",
+        "name": "Instituto Horizonte",
+        "description": "Formación práctica en herramientas digitales y gestión, con acompañamiento docente y proyectos aplicados.",
+        "specialty": "Tecnología y gestión",
+        "city": "CABA",
+        "province": "CABA",
+        "logo": "/assets/institute-horizonte.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "REFERENCE",
+          "stage": "ESTABLISHED",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2012,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "HYBRID",
+      "hours": 60,
+      "weeks": 16,
+      "price": 84000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Incorporá herramientas para colaborar en procesos de gestión de personas.",
+      "modules": [
+        {
+          "id": "demo-rrhh-horizonte-0",
+          "title": "Administración de personal",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-rrhh-horizonte-1",
+          "title": "Selección",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-rrhh-horizonte-2",
+          "title": "Capacitación",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-rrhh-horizonte-3",
+          "title": "Documentación y procesos",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Brindar herramientas iniciales para colaborar en la administración de personal, la selección y la capacitación dentro de una organización.",
+      "audience": [
+        "Personas que buscan iniciarse como asistentes de Recursos Humanos.",
+        "Personal administrativo que colabora en la gestión de personas.",
+        "Estudiantes de áreas afines que quieren incorporar herramientas prácticas."
+      ],
+      "outcomes": [
+        "Organizar la documentación básica de un legajo.",
+        "Preparar una guía para una entrevista de selección.",
+        "Planificar una actividad de capacitación interna."
+      ],
+      "skills": [
+        "Recursos humanos",
+        "Selección",
+        "Capacitación"
+      ],
+      "project": "Una carpeta de gestión de personal con documentos y una propuesta de capacitación.",
+      "evaluation": "Resolución de un caso de gestión y revisión de la documentación.",
+      "prerequisites": "Manejo básico de computadora. No requiere experiencia en Recursos Humanos.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Administración",
+      "location": null
+    },
+    {
+      "id": "community-taller",
+      "slug": "community-taller",
+      "title": "Community manager: primeros pasos",
+      "category": "comunicacion",
+      "institution": {
+        "id": "taller",
+        "slug": "taller",
+        "name": "Taller Abierto Formación",
+        "description": "Una propuesta de talleres de servicios y comunicación que está fortaleciendo su información y acompañamiento.",
+        "specialty": "Comunicación y servicios",
+        "city": "Mar del Plata",
+        "province": "Buenos Aires",
+        "logo": "/assets/institute-taller.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "BASE",
+          "stage": "EARLY",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2023,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONLINE",
+      "hours": 24,
+      "weeks": 6,
+      "price": 29000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Organizá publicaciones y desarrollá una rutina de gestión de redes.",
+      "modules": [
+        {
+          "id": "demo-community-taller-0",
+          "title": "Perfil y audiencia",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-community-taller-1",
+          "title": "Calendario de contenidos",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-community-taller-2",
+          "title": "Publicación",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-community-taller-3",
+          "title": "Indicadores básicos",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Incorporar una metodología inicial para planificar contenidos, gestionar publicaciones y realizar el seguimiento de una comunidad en redes sociales.",
+      "audience": [
+        "Personas que quieren iniciarse como community managers.",
+        "Emprendedores que administran las redes de su negocio.",
+        "Responsables de redes de pequeños comercios u organizaciones."
+      ],
+      "outcomes": [
+        "Armar un calendario de publicaciones para redes sociales.",
+        "Adaptar mensajes a una audiencia y un canal.",
+        "Llevar un registro básico del rendimiento de contenidos."
+      ],
+      "skills": [
+        "Redes sociales",
+        "Calendario de contenidos",
+        "Comunidad"
+      ],
+      "project": "Un calendario de dos semanas con publicaciones y criterios de seguimiento.",
+      "evaluation": "Presentación del calendario y revisión de las piezas propuestas.",
+      "prerequisites": "Uso habitual de redes sociales. Podés empezar sin experiencia profesional.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Comunicación",
+      "location": null
+    },
+    {
+      "id": "pasteleria-rio",
+      "slug": "pasteleria-rio",
+      "title": "Pastelería: técnicas esenciales",
+      "category": "gastronomia",
+      "institution": {
+        "id": "oficios",
+        "slug": "oficios",
+        "name": "Centro de Oficios del Río",
+        "description": "Formación en oficios con prácticas de taller y recorridos progresivos de aprendizaje.",
+        "specialty": "Oficios y servicios",
+        "city": "Rosario",
+        "province": "Santa Fe",
+        "logo": "/assets/institute-oficios.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "SOLIDITY",
+          "stage": "ESTABLISHED",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2015,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONSITE",
+      "hours": 48,
+      "weeks": 12,
+      "price": 95000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Aprendé técnicas, preparaciones y buenas prácticas en un entorno de taller.",
+      "modules": [
+        {
+          "id": "demo-pasteleria-rio-0",
+          "title": "Buenas prácticas",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-pasteleria-rio-1",
+          "title": "Masas y batidos",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-pasteleria-rio-2",
+          "title": "Cremas y rellenos",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-pasteleria-rio-3",
+          "title": "Presentación",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Introducir técnicas esenciales de pastelería y buenas prácticas de elaboración para desarrollar preparaciones de base en un entorno de taller.",
+      "audience": [
+        "Personas que quieren iniciarse en pastelería.",
+        "Aficionados que buscan ordenar y ampliar sus técnicas.",
+        "Personas interesadas en explorar un emprendimiento de pastelería."
+      ],
+      "outcomes": [
+        "Preparar masas, cremas y rellenos de base.",
+        "Aplicar buenas prácticas de manipulación de alimentos.",
+        "Presentar una preparación con terminación cuidada."
+      ],
+      "skills": [
+        "Pastelería",
+        "Técnicas de base",
+        "Buenas prácticas"
+      ],
+      "project": "Una preparación de pastelería con ficha de ingredientes y procedimiento.",
+      "evaluation": "Elaboración en taller y revisión de técnica, procedimiento y presentación.",
+      "prerequisites": "No requiere experiencia en pastelería. Consultá materiales y elementos de trabajo.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Gastronomía",
+      "location": null
+    },
+    {
+      "id": "emprender-aula",
+      "slug": "emprender-aula",
+      "title": "Herramientas para emprender",
+      "category": "administracion",
+      "institution": {
+        "id": "aula-sur",
+        "slug": "aula-sur",
+        "name": "Aula Sur Formación",
+        "description": "Cursos orientados a desarrollar habilidades para el trabajo y la gestión de pequeños negocios.",
+        "specialty": "Administración y negocios",
+        "city": "La Plata",
+        "province": "Buenos Aires",
+        "logo": "/assets/institute-aula-sur.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "DISTINCTION",
+          "stage": "EARLY",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2017,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONLINE",
+      "hours": 20,
+      "weeks": 5,
+      "price": 32000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Ordená tu idea de negocio, sus costos y la relación con tus clientes.",
+      "modules": [
+        {
+          "id": "demo-emprender-aula-0",
+          "title": "Modelo de negocio",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-emprender-aula-1",
+          "title": "Costos",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-emprender-aula-2",
+          "title": "Clientes",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-emprender-aula-3",
+          "title": "Plan de acción",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Acompañar la organización de una idea de negocio mediante herramientas iniciales para definir clientes, estimar costos y planificar acciones.",
+      "audience": [
+        "Personas que tienen una idea y quieren comenzar a emprender.",
+        "Emprendedores que buscan ordenar un proyecto en marcha.",
+        "Trabajadores independientes que quieren planificar su actividad."
+      ],
+      "outcomes": [
+        "Calcular costos y armar un presupuesto para tu idea.",
+        "Describir a tus clientes y tu propuesta de valor.",
+        "Organizar un plan de acción para un emprendimiento."
+      ],
+      "skills": [
+        "Emprendimientos",
+        "Costos",
+        "Plan de negocio"
+      ],
+      "project": "Un plan inicial de negocio con costos, clientes y próximos pasos.",
+      "evaluation": "Presentación del plan y justificación de sus supuestos.",
+      "prerequisites": "No requiere experiencia comercial. Podés trabajar sobre una idea propia o un caso.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Administración",
+      "location": null
+    },
+    {
+      "id": "portugues-puentes",
+      "slug": "portugues-puentes",
+      "title": "Portugués para el trabajo",
+      "category": "idiomas",
+      "institution": {
+        "id": "puentes",
+        "slug": "puentes",
+        "name": "Instituto Puentes",
+        "description": "Una institución que está incorporando su propuesta y documentando su actividad en la red.",
+        "specialty": "Idiomas y habilidades",
+        "city": "Mendoza",
+        "province": "Mendoza",
+        "logo": "/assets/institute-puentes.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "PENDING",
+          "stage": "PENDING",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "La evidencia aún está en revisión. No implica una valoración negativa."
+        },
+        "foundedYear": 2025,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONSITE",
+      "hours": 48,
+      "weeks": 16,
+      "price": 64000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Practicá vocabulario y conversaciones habituales del entorno laboral.",
+      "modules": [
+        {
+          "id": "demo-portugues-puentes-0",
+          "title": "Comunicación cotidiana",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-portugues-puentes-1",
+          "title": "Vocabulario laboral",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-portugues-puentes-2",
+          "title": "Atención y reuniones",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-portugues-puentes-3",
+          "title": "Práctica oral",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Desarrollar recursos básicos de comunicación en portugués para participar en intercambios sencillos vinculados con el trabajo y la atención.",
+      "audience": [
+        "Personas que tienen contacto laboral con hablantes de portugués.",
+        "Trabajadores de comercios, turismo y servicios.",
+        "Personas que buscan ampliar sus herramientas de comunicación laboral."
+      ],
+      "outcomes": [
+        "Presentarte y describir tu trabajo en portugués.",
+        "Intercambiar información en una conversación laboral sencilla.",
+        "Practicar respuestas para atención y reuniones breves."
+      ],
+      "skills": [
+        "Portugués",
+        "Conversación",
+        "Comunicación laboral"
+      ],
+      "project": "Una presentación personal y una simulación de conversación de trabajo.",
+      "evaluation": "Actividades de comprensión y conversación guiada.",
+      "prerequisites": "No requiere experiencia laboral previa. El instituto confirma el nivel de ingreso.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Idiomas",
+      "location": null
+    },
+    {
+      "id": "diseno-nexo",
+      "slug": "diseno-nexo",
+      "title": "Diseño de contenido con Canva",
+      "category": "comunicacion",
+      "institution": {
+        "id": "nexo",
+        "slug": "nexo",
+        "name": "Nexo Escuela Digital",
+        "description": "Aprendizaje digital a través de talleres, ejercicios guiados y proyectos de portfolio.",
+        "specialty": "Tecnología y comunicación",
+        "city": "Córdoba",
+        "province": "Córdoba",
+        "logo": "/assets/institute-nexo.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "DISTINCTION",
+          "stage": "EARLY",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2020,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "ONLINE",
+      "hours": 16,
+      "weeks": 4,
+      "price": 24000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Creá piezas visuales y aplicá criterios de composición y consistencia.",
+      "modules": [
+        {
+          "id": "demo-diseno-nexo-0",
+          "title": "Composición",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-diseno-nexo-1",
+          "title": "Identidad visual",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-diseno-nexo-2",
+          "title": "Piezas para redes",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-diseno-nexo-3",
+          "title": "Proyecto de contenido",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Incorporar criterios básicos de diseño y herramientas de Canva para crear contenidos visuales claros y consistentes con la identidad de una marca.",
+      "audience": [
+        "Emprendedores que crean contenidos para su marca.",
+        "Responsables de redes sociales que necesitan diseñar piezas.",
+        "Personas que quieren iniciarse en diseño de contenidos con Canva."
+      ],
+      "outcomes": [
+        "Crear un conjunto de piezas visuales con Canva.",
+        "Aplicar criterios de composición y legibilidad.",
+        "Mantener una identidad visual entre distintos formatos."
+      ],
+      "skills": [
+        "Canva",
+        "Diseño de contenidos",
+        "Composición"
+      ],
+      "project": "Un conjunto de tres piezas para una marca en formatos diferentes.",
+      "evaluation": "Entrega de las piezas y explicación de las decisiones de diseño.",
+      "prerequisites": "Manejo básico de computadora. No requiere conocimientos de diseño.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Comunicación",
+      "location": null
+    },
+    {
+      "id": "atencion-taller",
+      "slug": "atencion-taller",
+      "title": "Atención al cliente y ventas",
+      "category": "administracion",
+      "institution": {
+        "id": "taller",
+        "slug": "taller",
+        "name": "Taller Abierto Formación",
+        "description": "Una propuesta de talleres de servicios y comunicación que está fortaleciendo su información y acompañamiento.",
+        "specialty": "Comunicación y servicios",
+        "city": "Mar del Plata",
+        "province": "Buenos Aires",
+        "logo": "/assets/institute-taller.webp",
+        "socials": [],
+        "website": null,
+        "demo": true,
+        "assessment": {
+          "level": "BASE",
+          "stage": "EARLY",
+          "reviewedAt": null,
+          "methodologyVersion": "demo-progresiva-borrador",
+          "rationale": "Asignación ilustrativa para mostrar la escala. No representa una evaluación real ni una política aprobada por la Cámara."
+        },
+        "foundedYear": 2023,
+        "memberSince": null
+      },
+      "status": "PUBLISHED",
+      "mode": "HYBRID",
+      "hours": 20,
+      "weeks": 5,
+      "price": 28000,
+      "currency": "ARS",
+      "difficulty": "Inicial",
+      "description": "Desarrollá recursos de comunicación para la atención y el seguimiento comercial.",
+      "modules": [
+        {
+          "id": "demo-atencion-taller-0",
+          "title": "Escucha activa",
+          "content": null,
+          "order": 1
+        },
+        {
+          "id": "demo-atencion-taller-1",
+          "title": "Conversación comercial",
+          "content": null,
+          "order": 2
+        },
+        {
+          "id": "demo-atencion-taller-2",
+          "title": "Gestión de consultas",
+          "content": null,
+          "order": 3
+        },
+        {
+          "id": "demo-atencion-taller-3",
+          "title": "Seguimiento",
+          "content": null,
+          "order": 4
+        }
+      ],
+      "objectives": "Desarrollar habilidades de comunicación y organización para atender consultas, acompañar conversaciones comerciales y dar seguimiento a clientes.",
+      "audience": [
+        "Personas que quieren iniciarse en atención al cliente y ventas.",
+        "Trabajadores de comercios y servicios con contacto con el público.",
+        "Emprendedores que atienden consultas y gestionan sus ventas."
+      ],
+      "outcomes": [
+        "Responder una consulta de un cliente con claridad.",
+        "Practicar una conversación comercial basada en escucha activa.",
+        "Organizar el seguimiento de consultas y ventas."
+      ],
+      "skills": [
+        "Atención al cliente",
+        "Ventas",
+        "Comunicación"
+      ],
+      "project": "Una simulación de atención y una planilla de seguimiento de consultas.",
+      "evaluation": "Práctica de conversación y resolución de situaciones de atención.",
+      "prerequisites": "No requiere experiencia previa en atención o ventas.",
+      "certificate": {
+        "label": "Certificado emitido por la Cámara",
+        "issuerName": "Cámara Argentina",
+        "chamberIssued": true
+      },
+      "cover": "/assets/digital-learning.webp",
+      "coverAlt": "Escena ilustrativa de aprendizaje online",
+      "video": null,
+      "updatedAt": "2026-09-01",
+      "demo": true,
+      "versionId": null,
+      "versionNumber": null,
+      "categoryLabel": "Administración",
+      "location": null
+    }
+  ]
+}

@@ -1,0 +1,3918 @@
+{
+  "startedAt": "2026-10-07T18:15:36.014Z",
+  "mode": "aggregate",
+  "readOnly": true,
+  "sources": [
+    {
+      "alias": "socios",
+      "databaseKey": "DB_CAMARA_SOCIOS",
+      "checkedAt": "2026-10-07T18:15:36.016Z",
+      "connection": {
+        "connected": true,
+        "readOnlyTransaction": true,
+        "serverVersion": "8.0.46-0ubuntu0.22.04.4",
+        "tlsConfigured": false,
+        "privileges": {
+          "verified": true,
+          "readOnlyAccount": true,
+          "broadPrivileges": false
+        }
+      },
+      "metrics": {
+        "member_states": [
+          {
+            "estado": 1,
+            "total": "2778",
+            "without_end_date": "1792",
+            "with_start_date": "2778"
+          }
+        ],
+        "member_completeness": [
+          {
+            "total": "2778",
+            "nombre_null": "0",
+            "nombre_filled": "2778",
+            "localidad_null": "0",
+            "localidad_filled": "2778",
+            "provincia_null": "0",
+            "provincia_filled": "2777",
+            "provincia_cod_null": "1",
+            "provincia_cod_filled": "2777",
+            "textoweb_null": "2760",
+            "textoweb_filled": "18",
+            "web_null": "1823",
+            "web_filled": "955",
+            "facebook_null": "1242",
+            "facebook_filled": "1536",
+            "instagram_null": "484",
+            "instagram_filled": "2294",
+            "youtube_null": "2000",
+            "youtube_filled": "254",
+            "linkedin_null": "1991",
+            "linkedin_filled": "263",
+            "twitter_null": "2199",
+            "twitter_filled": "55",
+            "mail_insti_null": "0",
+            "mail_insti_filled": "2778",
+            "whatsapp_insti_null": "0",
+            "whatsapp_insti_filled": "2778",
+            "fecha_alta_null": "0",
+            "fecha_alta_filled": "2778",
+            "fecha_baja_null": "1792",
+            "fecha_baja_filled": "986"
+          }
+        ],
+        "member_current_completeness": [
+          {
+            "total": "1792",
+            "nombre_null": "0",
+            "nombre_filled": "1792",
+            "localidad_null": "0",
+            "localidad_filled": "1792",
+            "provincia_null": "0",
+            "provincia_filled": "1792",
+            "provincia_cod_null": "0",
+            "provincia_cod_filled": "1792",
+            "textoweb_null": "1784",
+            "textoweb_filled": "8",
+            "web_null": "1222",
+            "web_filled": "570",
+            "facebook_null": "825",
+            "facebook_filled": "967",
+            "instagram_null": "226",
+            "instagram_filled": "1566",
+            "youtube_null": "1501",
+            "youtube_filled": "184",
+            "linkedin_null": "1486",
+            "linkedin_filled": "199",
+            "twitter_null": "1647",
+            "twitter_filled": "38",
+            "mail_insti_null": "0",
+            "mail_insti_filled": "1792",
+            "whatsapp_insti_null": "0",
+            "whatsapp_insti_filled": "1792",
+            "fecha_alta_null": "0",
+            "fecha_alta_filled": "1792",
+            "fecha_baja_null": "1792",
+            "fecha_baja_filled": "0"
+          }
+        ],
+        "member_duplicates": [
+          {
+            "repeated_name_groups": "23",
+            "repeated_name_excess": "23"
+          }
+        ],
+        "member_link_quality": [
+          {
+            "total": "2778",
+            "web_without_https": "425",
+            "instagram_unvalidated": "276",
+            "positive_whatsapp": "2778",
+            "textoweb_with_html": "18"
+          }
+        ],
+        "users_bridge": [
+          {
+            "total": "3222",
+            "not_deleted": "3201",
+            "with_old_id": "3197",
+            "numeric_old_id": "3172",
+            "distinct_old_ids": "3197"
+          }
+        ],
+        "users_to_members": [
+          {
+            "users": "3222",
+            "member_match": "2772",
+            "unmatched_old_id": "425",
+            "active_match": "1791"
+          }
+        ],
+        "users_duplicate_bridge": [
+          {
+            "duplicated_old_ids": "0",
+            "excess_users": "0"
+          }
+        ],
+        "members_reverse_copy": [
+          {
+            "historical_members": "3208",
+            "missing_current_copy": "430"
+          }
+        ],
+        "members_cross_copy": [
+          {
+            "current_rows": "2778",
+            "missing_in_historical": "0",
+            "names_differ": "10",
+            "provinces_differ": "0",
+            "end_dates_differ": "9"
+          }
+        ]
+      },
+      "inventory": [
+        {
+          "table": "AllowedUris",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "ApiKeys",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "Categories",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "CertificateHolders",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "RefreshTokens",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "RoleAssignments",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "Roles",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "UserChanges",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "Users",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "__EFMigrationsHistory",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "postulantes",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "postulantes_cur",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "socios",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        }
+      ],
+      "dictionary": [
+        {
+          "table_name": "Categories",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "Categories",
+          "column_name": "Name",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 2
+        },
+        {
+          "table_name": "Categories",
+          "column_name": "MonthlyFee",
+          "column_type": "decimal(65,30)",
+          "data_type": "decimal",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 3
+        },
+        {
+          "table_name": "Categories",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 8
+        },
+        {
+          "table_name": "CertificateHolders",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "CertificateHolders",
+          "column_name": "PartnerId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 13
+        },
+        {
+          "table_name": "Users",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "Users",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 6
+        },
+        {
+          "table_name": "Users",
+          "column_name": "OldId",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 10
+        },
+        {
+          "table_name": "socios",
+          "column_name": "id",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": null,
+          "collation_name": null,
+          "position": 1
+        },
+        {
+          "table_name": "socios",
+          "column_name": "nombre",
+          "column_type": "varchar(120)",
+          "data_type": "varchar",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 2
+        },
+        {
+          "table_name": "socios",
+          "column_name": "razonsocial",
+          "column_type": "varchar(120)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 3
+        },
+        {
+          "table_name": "socios",
+          "column_name": "localidad",
+          "column_type": "varchar(50)",
+          "data_type": "varchar",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 11
+        },
+        {
+          "table_name": "socios",
+          "column_name": "provincia",
+          "column_type": "varchar(50)",
+          "data_type": "varchar",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 13
+        },
+        {
+          "table_name": "socios",
+          "column_name": "provincia_cod",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 14
+        },
+        {
+          "table_name": "socios",
+          "column_name": "whatsapp_insti",
+          "column_type": "bigint",
+          "data_type": "bigint",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 15
+        },
+        {
+          "table_name": "socios",
+          "column_name": "mail_insti",
+          "column_type": "varchar(150)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 16
+        },
+        {
+          "table_name": "socios",
+          "column_name": "web",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 18
+        },
+        {
+          "table_name": "socios",
+          "column_name": "facebook",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 19
+        },
+        {
+          "table_name": "socios",
+          "column_name": "instagram",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 20
+        },
+        {
+          "table_name": "socios",
+          "column_name": "youtube",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 21
+        },
+        {
+          "table_name": "socios",
+          "column_name": "twitter",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 22
+        },
+        {
+          "table_name": "socios",
+          "column_name": "linkedin",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 23
+        },
+        {
+          "table_name": "socios",
+          "column_name": "fecha_alta",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 25
+        },
+        {
+          "table_name": "socios",
+          "column_name": "fecha_baja",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 26
+        },
+        {
+          "table_name": "socios",
+          "column_name": "rubro",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 27
+        },
+        {
+          "table_name": "socios",
+          "column_name": "categoria",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 29
+        },
+        {
+          "table_name": "socios",
+          "column_name": "estado",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 30
+        },
+        {
+          "table_name": "socios",
+          "column_name": "textoweb",
+          "column_type": "text",
+          "data_type": "text",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 38
+        },
+        {
+          "table_name": "socios",
+          "column_name": "coordenadas",
+          "column_type": "varchar(50)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 39
+        },
+        {
+          "table_name": "socios",
+          "column_name": "mailcomercial",
+          "column_type": "varchar(60)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 40
+        },
+        {
+          "table_name": "socios",
+          "column_name": "wscomercial",
+          "column_type": "bigint",
+          "data_type": "bigint",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 41
+        },
+        {
+          "table_name": "socios",
+          "column_name": "pais",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 49
+        }
+      ],
+      "relations": []
+    },
+    {
+      "alias": "cursos",
+      "databaseKey": "DB_CAMARA_CURSOS",
+      "checkedAt": "2026-10-07T18:15:39.229Z",
+      "connection": {
+        "connected": true,
+        "readOnlyTransaction": true,
+        "serverVersion": "8.0.46-0ubuntu0.22.04.4",
+        "tlsConfigured": false,
+        "privileges": {
+          "verified": true,
+          "readOnlyAccount": true,
+          "broadPrivileges": false
+        }
+      },
+      "metrics": {
+        "legacy_owner_recovery": [
+          {
+            "latest_versions": "19569",
+            "legacy_course_match": "16909",
+            "historical_owner_match": "16909",
+            "current_copy_owner_match": "16909",
+            "missing_historical_owner": "0",
+            "ended_historical_owner": "4532",
+            "without_legacy_bridge": "2660"
+          }
+        ],
+        "legacy_owner_ambiguity": [
+          {
+            "partners_with_multiple_old_owners": "0",
+            "old_owners_with_multiple_partners": "0"
+          }
+        ],
+        "latest_dates": [
+          {
+            "total": "19569",
+            "null_expiration": "342",
+            "null_request": "183"
+          }
+        ],
+        "certificados_modern_bridge": [
+          {
+            "with_new_course_id": "4607",
+            "matches_course_id": "0",
+            "matches_version_id": "4607"
+          }
+        ],
+        "certifidise_modern_bridge": [
+          {
+            "with_new_course_id": "40",
+            "matches_course_id": "0",
+            "matches_version_id": "40"
+          }
+        ],
+        "certifisemi_modern_bridge": [
+          {
+            "with_new_course_id": "1634",
+            "matches_course_id": "0",
+            "matches_version_id": "1634"
+          }
+        ],
+        "course_counts": [
+          {
+            "courses": "19810",
+            "courses_not_deleted": "19569",
+            "versions": "19975",
+            "versions_not_deleted": "19710",
+            "informations": "19975",
+            "modules": "14462",
+            "categories": "86"
+          }
+        ],
+        "latest_states": [
+          {
+            "Status": 0,
+            "Approved": 0,
+            "Active": 1,
+            "total": "355",
+            "expiration_in_past": "0"
+          },
+          {
+            "Status": 1,
+            "Approved": 0,
+            "Active": 1,
+            "total": "2",
+            "expiration_in_past": "0"
+          },
+          {
+            "Status": 2,
+            "Approved": 0,
+            "Active": 1,
+            "total": "1",
+            "expiration_in_past": "0"
+          },
+          {
+            "Status": 2,
+            "Approved": 1,
+            "Active": 1,
+            "total": "17600",
+            "expiration_in_past": "0"
+          },
+          {
+            "Status": 4,
+            "Approved": 0,
+            "Active": 1,
+            "total": "109",
+            "expiration_in_past": "0"
+          },
+          {
+            "Status": 5,
+            "Approved": 0,
+            "Active": 1,
+            "total": "1",
+            "expiration_in_past": "0"
+          },
+          {
+            "Status": 6,
+            "Approved": 0,
+            "Active": 1,
+            "total": "41",
+            "expiration_in_past": "0"
+          },
+          {
+            "Status": 6,
+            "Approved": 1,
+            "Active": 1,
+            "total": "1460",
+            "expiration_in_past": "0"
+          }
+        ],
+        "latest_quality": [
+          {
+            "latest_versions": "19569",
+            "administrative_candidates": "19060",
+            "without_category": "419",
+            "without_information": "0",
+            "without_modules": "17008",
+            "without_tutor": "154",
+            "without_request_date": "183",
+            "with_old_id": "16909"
+          }
+        ],
+        "info_completeness": [
+          {
+            "total": "19975",
+            "Title_null": "0",
+            "Title_filled": "19975",
+            "TotalHours_null": "2",
+            "TotalHours_filled": "19973",
+            "Format_null": "0",
+            "Format_filled": "19975",
+            "Objectives_null": "16977",
+            "Objectives_filled": "2996",
+            "DestinedTo_null": "17118",
+            "DestinedTo_filled": "2857",
+            "EvaluationMethod_null": "17007",
+            "EvaluationMethod_filled": "2942",
+            "CertifyingEntityId_null": "501",
+            "CertifyingEntityId_filled": "19474"
+          }
+        ],
+        "latest_info_completeness": [
+          {
+            "info_rows": "19569",
+            "title_filled": "19569",
+            "positive_hours": "19563",
+            "zero_hours": "0",
+            "negative_hours": "4",
+            "null_hours": "2",
+            "min_hours": "-120.000000000000000000000000000000",
+            "max_hours": "5200.000000000000000000000000000000",
+            "objectives_filled": "2653",
+            "destined_to_filled": "2605",
+            "evaluation_filled": "2632",
+            "objectives_with_html": "2640",
+            "audience_with_html": "2605",
+            "with_certifying_entity": "19294"
+          }
+        ],
+        "candidate_info_completeness": [
+          {
+            "info_rows": "19060",
+            "positive_hours": "19056",
+            "objectives_filled": "2349",
+            "destined_to_filled": "2309",
+            "evaluation_filled": "2344"
+          }
+        ],
+        "format_codes": [
+          {
+            "format_code": 1,
+            "total": "18020"
+          },
+          {
+            "format_code": 2,
+            "total": "937"
+          },
+          {
+            "format_code": 3,
+            "total": "411"
+          },
+          {
+            "format_code": 4,
+            "total": "201"
+          }
+        ],
+        "categories": [
+          {
+            "category_label": "Estética, Masajes y Bienestar",
+            "total": "3368"
+          },
+          {
+            "category_label": "Lenguas e Idiomas",
+            "total": "1639"
+          },
+          {
+            "category_label": "Salud y Medicina",
+            "total": "1626"
+          },
+          {
+            "category_label": "Psicología, Psicomotricidad, Grafología y Técnicas Terapéuticas",
+            "total": "1162"
+          },
+          {
+            "category_label": "Prácticas Holísticas y Estilo de Vida",
+            "total": "1099"
+          },
+          {
+            "category_label": "Educación y Formación",
+            "total": "1061"
+          },
+          {
+            "category_label": "Administración y Gestión",
+            "total": "823"
+          },
+          {
+            "category_label": "Oficios",
+            "total": "688"
+          },
+          {
+            "category_label": "Deportes y Fitness",
+            "total": "648"
+          },
+          {
+            "category_label": "Derecho y Legales",
+            "total": "556"
+          },
+          {
+            "category_label": "Liderazgo y coaching",
+            "total": "518"
+          },
+          {
+            "category_label": "Herramientas Informáticas y Tecnología Digital",
+            "total": "444"
+          },
+          {
+            "category_label": null,
+            "total": "419"
+          },
+          {
+            "category_label": "Administración de Servicios de Salud y Farmacias",
+            "total": "379"
+          },
+          {
+            "category_label": "Hotelería, Turismo y Gastronomia",
+            "total": "313"
+          },
+          {
+            "category_label": "Cuidado de personas",
+            "total": "289"
+          },
+          {
+            "category_label": "Industria, Energia y Medio Ambiente",
+            "total": "221"
+          },
+          {
+            "category_label": "Marketing, Marketing Digital y Ventas",
+            "total": "211"
+          },
+          {
+            "category_label": "Seguridad e Higiene",
+            "total": "210"
+          },
+          {
+            "category_label": "Habilidades blandas",
+            "total": "192"
+          },
+          {
+            "category_label": "Criminología y Seguridad",
+            "total": "186"
+          },
+          {
+            "category_label": "Recursos Humanos y Empleabilidad",
+            "total": "185"
+          },
+          {
+            "category_label": "Música y Canto",
+            "total": "172"
+          },
+          {
+            "category_label": "Emergentología, Socorrismo y Accidentología",
+            "total": "156"
+          },
+          {
+            "category_label": "Comunicación, Publicidad y Periodismo",
+            "total": "147"
+          },
+          {
+            "category_label": "Arte, Arteterapia y Musicoterapia",
+            "total": "137"
+          },
+          {
+            "category_label": "Desarrollo Emprendedor y Profesional",
+            "total": "127"
+          },
+          {
+            "category_label": "Economía y Finanzas",
+            "total": "123"
+          },
+          {
+            "category_label": "Danza y Coreografía",
+            "total": "116"
+          },
+          {
+            "category_label": "Nutrición y Seguridad Alimentaria",
+            "total": "98"
+          },
+          {
+            "category_label": "Programación",
+            "total": "97"
+          },
+          {
+            "category_label": "Administración y Producción Rural",
+            "total": "95"
+          },
+          {
+            "category_label": "Accesibilidad e inclusión",
+            "total": "94"
+          },
+          {
+            "category_label": "Moda",
+            "total": "91"
+          },
+          {
+            "category_label": "Inteligencia Artificial",
+            "total": "85"
+          },
+          {
+            "category_label": "Arquitectura, Inmobiliaria y Construcción",
+            "total": "85"
+          },
+          {
+            "category_label": "Seguridad ",
+            "total": "85"
+          },
+          {
+            "category_label": "Creatividad y diseño",
+            "total": "84"
+          },
+          {
+            "category_label": "Logística, Máquinas y Herramientas",
+            "total": "78"
+          },
+          {
+            "category_label": "Artes Visuales",
+            "total": "78"
+          },
+          {
+            "category_label": "Artesanías",
+            "total": "72"
+          },
+          {
+            "category_label": "Relaciones Públicas, Imagen Personal y Empresarial",
+            "total": "70"
+          },
+          {
+            "category_label": "Ciencias Sociales, Política y Sector Público",
+            "total": "70"
+          },
+          {
+            "category_label": "Indumentaria",
+            "total": "67"
+          },
+          {
+            "category_label": "Religión y Espiritualidad",
+            "total": "66"
+          },
+          {
+            "category_label": "Veterinaria y Agro",
+            "total": "64"
+          },
+          {
+            "category_label": "Ciencia y Tecnología",
+            "total": "63"
+          },
+          {
+            "category_label": "Escritura y Literatura",
+            "total": "63"
+          },
+          {
+            "category_label": "Comercio Exterior",
+            "total": "61"
+          },
+          {
+            "category_label": "Transportes y Educación Vial ",
+            "total": "56"
+          },
+          {
+            "category_label": "Investigación Forense, Criminología y Seguridad",
+            "total": "51"
+          },
+          {
+            "category_label": "Organización de Eventos y Relaciones Publicas",
+            "total": "51"
+          },
+          {
+            "category_label": "Desarrollo Social",
+            "total": "50"
+          },
+          {
+            "category_label": "Alimentos y Bebidas",
+            "total": "47"
+          },
+          {
+            "category_label": "Infancia, NNyA",
+            "total": "45"
+          },
+          {
+            "category_label": "Calidad, Producción e Investigación y Desarrollo ",
+            "total": "42"
+          },
+          {
+            "category_label": "Dibujo y Pintura",
+            "total": "39"
+          },
+          {
+            "category_label": "Organizacional",
+            "total": "36"
+          },
+          {
+            "category_label": "Gestión y Diseño de Moda",
+            "total": "34"
+          },
+          {
+            "category_label": "Tecnología",
+            "total": "33"
+          },
+          {
+            "category_label": "ADE",
+            "total": "33"
+          },
+          {
+            "category_label": "Ambiente y Territorio",
+            "total": "30"
+          },
+          {
+            "category_label": "Ciberseguridad",
+            "total": "26"
+          },
+          {
+            "category_label": "Cine, Gestión Audiovisual, Teatro y Actuación",
+            "total": "25"
+          },
+          {
+            "category_label": "Adultos Mayores",
+            "total": "20"
+          },
+          {
+            "category_label": "Desarrollo Humano",
+            "total": "19"
+          },
+          {
+            "category_label": "Derechos, Género, Diversidad",
+            "total": "17"
+          },
+          {
+            "category_label": "Automatización y Robótica",
+            "total": "16"
+          },
+          {
+            "category_label": "Diseño de Interiores y Decoración",
+            "total": "15"
+          },
+          {
+            "category_label": "Relaciones Internacionales",
+            "total": "13"
+          },
+          {
+            "category_label": "Fonoaudiología",
+            "total": "11"
+          },
+          {
+            "category_label": "Tanatología",
+            "total": "10"
+          },
+          {
+            "category_label": "Administración Pública y Gobierno",
+            "total": "9"
+          },
+          {
+            "category_label": "Biblioteca y Archivo",
+            "total": "8"
+          },
+          {
+            "category_label": "Historia y Geografía",
+            "total": "6"
+          },
+          {
+            "category_label": "Jardinería y Botánica",
+            "total": "6"
+          },
+          {
+            "category_label": "Producción Rural",
+            "total": "6"
+          },
+          {
+            "category_label": "Infancia",
+            "total": "6"
+          },
+          {
+            "category_label": "Desarrollo Cultural",
+            "total": "6"
+          },
+          {
+            "category_label": "Ciencias Aplicadas",
+            "total": "5"
+          },
+          {
+            "category_label": "Imágen y Sonido",
+            "total": "5"
+          },
+          {
+            "category_label": "Filosofía",
+            "total": "5"
+          },
+          {
+            "category_label": "Investigación y Desarrollo",
+            "total": "2"
+          },
+          {
+            "category_label": "Agroecología",
+            "total": "2"
+          },
+          {
+            "category_label": "Navegación",
+            "total": "1"
+          },
+          {
+            "category_label": "Cultura General",
+            "total": "1"
+          },
+          {
+            "category_label": "Náutica y Actividad Portuaria",
+            "total": "1"
+          }
+        ],
+        "module_completeness": [
+          {
+            "total": "14462",
+            "Title_null": "0",
+            "Title_filled": "14462",
+            "Content_null": "0",
+            "Content_filled": "14462",
+            "Order_null": "0",
+            "Order_filled": "14462"
+          }
+        ],
+        "module_quality": [
+          {
+            "total": "14462",
+            "content_with_html": "14008"
+          }
+        ],
+        "duplicate_info": [
+          {
+            "versions_with_multiple_info": "0",
+            "excess_info_rows": "0"
+          }
+        ],
+        "duplicate_version_number": [
+          {
+            "duplicated_version_numbers": "0",
+            "excess": "0"
+          }
+        ],
+        "duplicate_module_order": [
+          {
+            "duplicate_order_groups": "7"
+          }
+        ],
+        "orphan_children": [
+          {
+            "courses_without_version": "0",
+            "versions_without_course": "0",
+            "info_without_version": "0"
+          }
+        ],
+        "partner_bridge": [
+          {
+            "courses": "19569",
+            "distinct_partners": "2429",
+            "partner_without_user": "19569",
+            "deleted_user": null,
+            "user_without_member": "0",
+            "member_matched": "0",
+            "ended_members": "0"
+          }
+        ],
+        "partner_historical_bridge": [
+          {
+            "courses": "19569",
+            "user_matched": "0",
+            "historic_member_matched": "0",
+            "ended_historic_members": "0"
+          }
+        ],
+        "migration_status_comparison": [
+          {
+            "Status": 2,
+            "Approved": 1,
+            "Active": 1,
+            "estado": 1,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 0,
+            "total": "14988"
+          },
+          {
+            "Status": 6,
+            "Approved": 1,
+            "Active": 1,
+            "estado": 1,
+            "inactivo": 1,
+            "desaprobado": 0,
+            "observado": 0,
+            "total": "1439"
+          },
+          {
+            "Status": 2,
+            "Approved": 1,
+            "Active": 1,
+            "estado": 1,
+            "inactivo": 1,
+            "desaprobado": 0,
+            "observado": 0,
+            "total": "12"
+          },
+          {
+            "Status": 2,
+            "Approved": 1,
+            "Active": 1,
+            "estado": 1,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 1,
+            "total": "251"
+          },
+          {
+            "Status": 0,
+            "Approved": 0,
+            "Active": 1,
+            "estado": 0,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 1,
+            "total": "153"
+          },
+          {
+            "Status": 0,
+            "Approved": 0,
+            "Active": 1,
+            "estado": 0,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 0,
+            "total": "24"
+          },
+          {
+            "Status": 6,
+            "Approved": 0,
+            "Active": 1,
+            "estado": 1,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 0,
+            "total": "17"
+          },
+          {
+            "Status": 6,
+            "Approved": 1,
+            "Active": 1,
+            "estado": 1,
+            "inactivo": 1,
+            "desaprobado": 0,
+            "observado": 1,
+            "total": "14"
+          },
+          {
+            "Status": 6,
+            "Approved": 1,
+            "Active": 1,
+            "estado": 1,
+            "inactivo": 1,
+            "desaprobado": 1,
+            "observado": 1,
+            "total": "6"
+          },
+          {
+            "Status": 2,
+            "Approved": 1,
+            "Active": 1,
+            "estado": 0,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 1,
+            "total": "2"
+          },
+          {
+            "Status": 6,
+            "Approved": 0,
+            "Active": 1,
+            "estado": 1,
+            "inactivo": 1,
+            "desaprobado": 0,
+            "observado": 0,
+            "total": "1"
+          },
+          {
+            "Status": 6,
+            "Approved": 1,
+            "Active": 1,
+            "estado": 1,
+            "inactivo": 1,
+            "desaprobado": 1,
+            "observado": 0,
+            "total": "1"
+          },
+          {
+            "Status": 4,
+            "Approved": 0,
+            "Active": 1,
+            "estado": 0,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 1,
+            "total": "1"
+          }
+        ],
+        "certifying_info_references": [
+          {
+            "infos": "19569",
+            "same_certifying_reference": "16963",
+            "with_entity": "19294"
+          }
+        ],
+        "legacy_course_bridge": [
+          {
+            "versions": "19569",
+            "with_old_id": "16909",
+            "numeric_old_id": "16909",
+            "legacy_match": "16909",
+            "institution_mismatch": "0"
+          }
+        ],
+        "duplicate_old_course_id": [
+          {
+            "duplicate_old_ids": "0",
+            "excess": "0"
+          }
+        ],
+        "certifying_references": [
+          {
+            "courses": "19569",
+            "distinct_certifying_ids": "2607",
+            "matching_user": "0",
+            "same_as_partner": "0"
+          }
+        ]
+      },
+      "inventory": [
+        {
+          "table": "Comments",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "CourseCategories",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "CourseInformations",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "CourseModules",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "CourseTutors",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "CourseVersions",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "Courses",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "ExtraTextsForCertificate",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "FormationLevels",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "Notifications",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "Observations",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "TutorAcademicExperiences",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "TutorProfessionalExperiences",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "Tutors",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "__EFMigrationsHistory",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        }
+      ],
+      "dictionary": [
+        {
+          "table_name": "CourseCategories",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "CourseCategories",
+          "column_name": "Title",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 2
+        },
+        {
+          "table_name": "CourseCategories",
+          "column_name": "CreatedAt",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 3
+        },
+        {
+          "table_name": "CourseCategories",
+          "column_name": "ModifiedAt",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 4
+        },
+        {
+          "table_name": "CourseCategories",
+          "column_name": "CreatedBy",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 5
+        },
+        {
+          "table_name": "CourseCategories",
+          "column_name": "ModifiedBy",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 6
+        },
+        {
+          "table_name": "CourseCategories",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 7
+        },
+        {
+          "table_name": "CourseCategories",
+          "column_name": "IconUrl",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 8
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "CourseVersionId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "MUL",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 2
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "Title",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 3
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "EvaluationMethod",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 4
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "TotalHours",
+          "column_type": "decimal(65,30)",
+          "data_type": "decimal",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 5
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 11
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "Format",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 12
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "Objectives",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 13
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "RequiresExam",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 14
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "CertifyingEntityId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 15
+        },
+        {
+          "table_name": "CourseInformations",
+          "column_name": "DestinedTo",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 16
+        },
+        {
+          "table_name": "CourseModules",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "CourseModules",
+          "column_name": "CourseVersionId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "MUL",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 2
+        },
+        {
+          "table_name": "CourseModules",
+          "column_name": "Title",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 3
+        },
+        {
+          "table_name": "CourseModules",
+          "column_name": "Content",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 4
+        },
+        {
+          "table_name": "CourseModules",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 9
+        },
+        {
+          "table_name": "CourseModules",
+          "column_name": "Order",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 10
+        },
+        {
+          "table_name": "CourseTutors",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "CourseTutors",
+          "column_name": "TutorId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "MUL",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 2
+        },
+        {
+          "table_name": "CourseTutors",
+          "column_name": "CourseVersionId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "MUL",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 3
+        },
+        {
+          "table_name": "CourseTutors",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 8
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "CourseId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "MUL",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 2
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "Approved",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 3
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "VersionNumber",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 4
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "CreatedAt",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 5
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "ModifiedAt",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 6
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "CreatedBy",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 7
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "ModifiedBy",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 8
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 9
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "Status",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "MUL",
+          "character_set": null,
+          "collation_name": null,
+          "position": 10
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "ExpirationDate",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 11
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "LastStatusUpdate",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 12
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "RequestDate",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "YES",
+          "column_key": "MUL",
+          "character_set": null,
+          "collation_name": null,
+          "position": 13
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "ValidatorId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 14
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "ExtraCertificateInformation",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 15
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "CategoryId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "YES",
+          "column_key": "MUL",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 16
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "ObservedAt",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 17
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "UpdatedAt",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 18
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "OldId",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 19
+        },
+        {
+          "table_name": "CourseVersions",
+          "column_name": "Active",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 20
+        },
+        {
+          "table_name": "Courses",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "Courses",
+          "column_name": "PartnerId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "MUL",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 2
+        },
+        {
+          "table_name": "Courses",
+          "column_name": "CertifyingInstitutionId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 3
+        },
+        {
+          "table_name": "Courses",
+          "column_name": "CreatedAt",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 4
+        },
+        {
+          "table_name": "Courses",
+          "column_name": "ModifiedAt",
+          "column_type": "datetime(6)",
+          "data_type": "datetime",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 5
+        },
+        {
+          "table_name": "Courses",
+          "column_name": "CreatedBy",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 6
+        },
+        {
+          "table_name": "Courses",
+          "column_name": "ModifiedBy",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 7
+        },
+        {
+          "table_name": "Courses",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 8
+        },
+        {
+          "table_name": "ExtraTextsForCertificate",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "ExtraTextsForCertificate",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 6
+        },
+        {
+          "table_name": "ExtraTextsForCertificate",
+          "column_name": "Content",
+          "column_type": "longtext",
+          "data_type": "longtext",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb4",
+          "collation_name": "utf8mb4_0900_ai_ci",
+          "position": 7
+        },
+        {
+          "table_name": "FormationLevels",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "FormationLevels",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 6
+        },
+        {
+          "table_name": "TutorAcademicExperiences",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "TutorAcademicExperiences",
+          "column_name": "TutorId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "MUL",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 4
+        },
+        {
+          "table_name": "TutorAcademicExperiences",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 9
+        },
+        {
+          "table_name": "TutorAcademicExperiences",
+          "column_name": "FormationLevelId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "MUL",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 11
+        },
+        {
+          "table_name": "TutorProfessionalExperiences",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "TutorProfessionalExperiences",
+          "column_name": "TutorId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "MUL",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 7
+        },
+        {
+          "table_name": "TutorProfessionalExperiences",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 12
+        },
+        {
+          "table_name": "Tutors",
+          "column_name": "Id",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 1
+        },
+        {
+          "table_name": "Tutors",
+          "column_name": "PartnerId",
+          "column_type": "char(36)",
+          "data_type": "char",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "ascii",
+          "collation_name": "ascii_general_ci",
+          "position": 9
+        },
+        {
+          "table_name": "Tutors",
+          "column_name": "Deleted",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 14
+        }
+      ],
+      "relations": [
+        {
+          "table_name": "CourseInformations",
+          "constraint_name": "FK_CourseInformations_CourseVersions_CourseVersionId",
+          "column_name": "CourseVersionId",
+          "position": 1,
+          "referenced_table": "CourseVersions",
+          "referenced_column": "Id",
+          "referenced_scope": "same"
+        },
+        {
+          "table_name": "CourseModules",
+          "constraint_name": "FK_CourseModules_CourseVersions_CourseVersionId",
+          "column_name": "CourseVersionId",
+          "position": 1,
+          "referenced_table": "CourseVersions",
+          "referenced_column": "Id",
+          "referenced_scope": "same"
+        },
+        {
+          "table_name": "CourseTutors",
+          "constraint_name": "FK_CourseTutors_CourseVersions_CourseVersionId",
+          "column_name": "CourseVersionId",
+          "position": 1,
+          "referenced_table": "CourseVersions",
+          "referenced_column": "Id",
+          "referenced_scope": "same"
+        },
+        {
+          "table_name": "CourseTutors",
+          "constraint_name": "FK_CourseTutors_Tutors_TutorId",
+          "column_name": "TutorId",
+          "position": 1,
+          "referenced_table": "Tutors",
+          "referenced_column": "Id",
+          "referenced_scope": "same"
+        },
+        {
+          "table_name": "CourseVersions",
+          "constraint_name": "FK_CourseVersions_CourseCategories_CategoryId",
+          "column_name": "CategoryId",
+          "position": 1,
+          "referenced_table": "CourseCategories",
+          "referenced_column": "Id",
+          "referenced_scope": "same"
+        },
+        {
+          "table_name": "CourseVersions",
+          "constraint_name": "FK_CourseVersions_Courses_CourseId",
+          "column_name": "CourseId",
+          "position": 1,
+          "referenced_table": "Courses",
+          "referenced_column": "Id",
+          "referenced_scope": "same"
+        },
+        {
+          "table_name": "TutorAcademicExperiences",
+          "constraint_name": "FK_TutorAcademicExperiences_FormationLevels_FormationLevelId",
+          "column_name": "FormationLevelId",
+          "position": 1,
+          "referenced_table": "FormationLevels",
+          "referenced_column": "Id",
+          "referenced_scope": "same"
+        },
+        {
+          "table_name": "TutorAcademicExperiences",
+          "constraint_name": "FK_TutorAcademicExperiences_Tutors_TutorId",
+          "column_name": "TutorId",
+          "position": 1,
+          "referenced_table": "Tutors",
+          "referenced_column": "Id",
+          "referenced_scope": "same"
+        },
+        {
+          "table_name": "TutorProfessionalExperiences",
+          "constraint_name": "FK_TutorProfessionalExperiences_Tutors_TutorId",
+          "column_name": "TutorId",
+          "position": 1,
+          "referenced_table": "Tutors",
+          "referenced_column": "Id",
+          "referenced_scope": "same"
+        }
+      ]
+    },
+    {
+      "alias": "historica",
+      "databaseKey": "CAMARA_DB_NAME",
+      "checkedAt": "2026-10-07T18:15:50.978Z",
+      "connection": {
+        "connected": true,
+        "readOnlyTransaction": true,
+        "serverVersion": "8.0.46-0ubuntu0.22.04.4",
+        "tlsConfigured": false,
+        "privileges": {
+          "verified": true,
+          "readOnlyAccount": true,
+          "broadPrivileges": false
+        }
+      },
+      "metrics": {
+        "member_states": [
+          {
+            "estado": 1,
+            "total": "3208",
+            "without_end_date": "2215",
+            "with_start_date": "3208"
+          }
+        ],
+        "member_completeness": [
+          {
+            "total": "3208",
+            "nombre_null": "0",
+            "nombre_filled": "3208",
+            "localidad_null": "0",
+            "localidad_filled": "3208",
+            "provincia_null": "0",
+            "provincia_filled": "3207",
+            "provincia_cod_null": "431",
+            "provincia_cod_filled": "2777",
+            "textoweb_null": "3190",
+            "textoweb_filled": "18",
+            "web_null": "2141",
+            "web_filled": "1067",
+            "facebook_null": "1672",
+            "facebook_filled": "1536",
+            "instagram_null": "547",
+            "instagram_filled": "2661",
+            "youtube_null": "2432",
+            "youtube_filled": "254",
+            "linkedin_null": "2423",
+            "linkedin_filled": "263",
+            "twitter_null": "2631",
+            "twitter_filled": "55",
+            "mail_insti_null": "0",
+            "mail_insti_filled": "3208",
+            "whatsapp_insti_null": "0",
+            "whatsapp_insti_filled": "3208",
+            "fecha_alta_null": "0",
+            "fecha_alta_filled": "3208",
+            "fecha_baja_null": "2215",
+            "fecha_baja_filled": "993"
+          }
+        ],
+        "member_current_completeness": [
+          {
+            "total": "2215",
+            "nombre_null": "0",
+            "nombre_filled": "2215",
+            "localidad_null": "0",
+            "localidad_filled": "2215",
+            "provincia_null": "0",
+            "provincia_filled": "2215",
+            "provincia_cod_null": "430",
+            "provincia_cod_filled": "1785",
+            "textoweb_null": "2207",
+            "textoweb_filled": "8",
+            "web_null": "1534",
+            "web_filled": "681",
+            "facebook_null": "1249",
+            "facebook_filled": "966",
+            "instagram_null": "287",
+            "instagram_filled": "1928",
+            "youtube_null": "1928",
+            "youtube_filled": "182",
+            "linkedin_null": "1911",
+            "linkedin_filled": "199",
+            "twitter_null": "2072",
+            "twitter_filled": "38",
+            "mail_insti_null": "0",
+            "mail_insti_filled": "2215",
+            "whatsapp_insti_null": "0",
+            "whatsapp_insti_filled": "2215",
+            "fecha_alta_null": "0",
+            "fecha_alta_filled": "2215",
+            "fecha_baja_null": "2215",
+            "fecha_baja_filled": "0"
+          }
+        ],
+        "member_duplicates": [
+          {
+            "repeated_name_groups": "43",
+            "repeated_name_excess": "48"
+          }
+        ],
+        "member_link_quality": [
+          {
+            "total": "3208",
+            "web_without_https": "472",
+            "instagram_unvalidated": "311",
+            "positive_whatsapp": "3208",
+            "textoweb_with_html": "18"
+          }
+        ],
+        "legacy_course_completeness": [
+          {
+            "total": "17041",
+            "nombre_null": "0",
+            "nombre_filled": "17041",
+            "horas_null": "0",
+            "horas_filled": "17041",
+            "programa_null": "0",
+            "programa_filled": "17006",
+            "cv_null": "0",
+            "cv_filled": "16982",
+            "categoria_null": "0",
+            "categoria_filled": "17041",
+            "fecha_validacion_null": "1456",
+            "fecha_validacion_filled": "15585",
+            "fecha_vto_null": "225",
+            "fecha_vto_filled": "16816",
+            "fecmod_null": "15523",
+            "fecmod_filled": "1518"
+          }
+        ],
+        "legacy_course_states": [
+          {
+            "estado": 1,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 0,
+            "total": "15061"
+          },
+          {
+            "estado": 1,
+            "inactivo": 1,
+            "desaprobado": 0,
+            "observado": 0,
+            "total": "1464"
+          },
+          {
+            "estado": 1,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 1,
+            "total": "251"
+          },
+          {
+            "estado": 0,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 1,
+            "total": "157"
+          },
+          {
+            "estado": 1,
+            "inactivo": 0,
+            "desaprobado": 1,
+            "observado": 1,
+            "total": "52"
+          },
+          {
+            "estado": 0,
+            "inactivo": 0,
+            "desaprobado": 0,
+            "observado": 0,
+            "total": "24"
+          },
+          {
+            "estado": 1,
+            "inactivo": 1,
+            "desaprobado": 0,
+            "observado": 1,
+            "total": "14"
+          },
+          {
+            "estado": 1,
+            "inactivo": 0,
+            "desaprobado": 1,
+            "observado": 0,
+            "total": "11"
+          },
+          {
+            "estado": 1,
+            "inactivo": 1,
+            "desaprobado": 1,
+            "observado": 1,
+            "total": "6"
+          },
+          {
+            "estado": 1,
+            "inactivo": 1,
+            "desaprobado": 1,
+            "observado": 0,
+            "total": "1"
+          }
+        ],
+        "legacy_type_codes": [
+          {
+            "tipocurso": 1,
+            "total": "12857"
+          },
+          {
+            "tipocurso": 2,
+            "total": "4184"
+          }
+        ],
+        "legacy_relations": [
+          {
+            "total": "17041",
+            "without_member": "4",
+            "without_category": "82",
+            "nonpositive_hours": "1"
+          }
+        ],
+        "legacy_duplicate_titles": [
+          {
+            "duplicate_title_groups": "544",
+            "excess": "619"
+          }
+        ],
+        "category_id_overlap": [
+          {
+            "thematic_categories": "84",
+            "legacy_cat_rows": "32",
+            "id_overlap": "32",
+            "different_labels": "9"
+          }
+        ],
+        "certificados_states": [
+          {
+            "estado": 0,
+            "total": "1166",
+            "with_validation_date": "0",
+            "with_new_course_id": "676"
+          },
+          {
+            "estado": 1,
+            "total": "110122",
+            "with_validation_date": "110122",
+            "with_new_course_id": "3931"
+          }
+        ],
+        "certificados_relations": [
+          {
+            "total": "111288",
+            "missing_legacy_course": "4652",
+            "missing_member": "1",
+            "course_member_mismatch": "0",
+            "with_new_course_id": "4607"
+          }
+        ],
+        "certifidise_states": [
+          {
+            "estado": 0,
+            "total": "21",
+            "with_validation_date": "0",
+            "with_new_course_id": "2"
+          },
+          {
+            "estado": 1,
+            "total": "924",
+            "with_validation_date": "924",
+            "with_new_course_id": "38"
+          }
+        ],
+        "certifidise_relations": [
+          {
+            "total": "945",
+            "missing_legacy_course": "36",
+            "missing_member": "0",
+            "course_member_mismatch": "6",
+            "with_new_course_id": "40"
+          }
+        ],
+        "certifisemi_states": [
+          {
+            "estado": 0,
+            "total": "142",
+            "with_validation_date": "0",
+            "with_new_course_id": "98"
+          },
+          {
+            "estado": 1,
+            "total": "30758",
+            "with_validation_date": "30758",
+            "with_new_course_id": "1536"
+          }
+        ],
+        "certifisemi_relations": [
+          {
+            "total": "30900",
+            "missing_legacy_course": "1626",
+            "missing_member": "0",
+            "course_member_mismatch": "0",
+            "with_new_course_id": "1634"
+          }
+        ],
+        "certificate_id_namespace": [
+          {
+            "id_overlap_cert_dise": "897"
+          }
+        ]
+      },
+      "inventory": [
+        {
+          "table": "1alumnos_almagro",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "1alumnos_mercedes",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "1leads",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "aaregiones",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "actas_cert",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "actas_dise",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "actas_semi",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "agenda",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "alu_encuesta_rta",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "alu_encuestas_det",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "alu_encuestas_encab",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "cat",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "categcur",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "categorias",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "certificados",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "certifidise",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "certifisemi",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "ciudades",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "compras",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "consultasweb",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "contra_socio",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "contrato",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "cuentas",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "cursos",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "cursos_obs",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "datos",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "datos_alumnos",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "deuda",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "encuesta_rta",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "encuestas_det",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "encuestas_encab",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "gestiones",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_acciones",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_area_gestion",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_atencion",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_estados",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_leads",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_leads_asesores",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_objetivos",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_origen",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_paises",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_provincias",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_tipocons",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "i_valoracion",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "mensajes",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "noticias",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "paises",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "paises_coniva",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "peru",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "postulantes",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "postulantes_cur",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "postulantes_obs",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "provee",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "rubros",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "rubros_not",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "socio_induccion",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "socios",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "socios_baja",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "tipificaciones",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "tmp_ids",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "usuarios",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "usuarios_roles",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "usuarios_roles_det",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "vista_certificados",
+          "type": "VIEW",
+          "engine": null
+        },
+        {
+          "table": "vista_certificados1",
+          "type": "VIEW",
+          "engine": null
+        },
+        {
+          "table": "vista_socios",
+          "type": "VIEW",
+          "engine": null
+        },
+        {
+          "table": "ws_socios",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_acciones",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_alumnos",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_alumnos2",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_asesores",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_campanias",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_campanias_det",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_carreras",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_casos",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_caus",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_ciudades",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_comisiones",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_estados",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_leads",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_leads_asesores",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_liquidacion_cuat",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_liquidacion_cuat_det",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_mov_cen",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_mov_cuenta",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_mov_tipo",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_mov_tipo_g",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_movimientos",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_objetivos",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_origen",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        },
+        {
+          "table": "x_situaciones",
+          "type": "BASE TABLE",
+          "engine": "InnoDB"
+        }
+      ],
+      "dictionary": [
+        {
+          "table_name": "cat",
+          "column_name": "id",
+          "column_type": "double",
+          "data_type": "double",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 1
+        },
+        {
+          "table_name": "cat",
+          "column_name": "nombre",
+          "column_type": "varchar(255)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 2
+        },
+        {
+          "table_name": "cat",
+          "column_name": "icono",
+          "column_type": "varchar(255)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 3
+        },
+        {
+          "table_name": "categcur",
+          "column_name": "id",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": null,
+          "collation_name": null,
+          "position": 1
+        },
+        {
+          "table_name": "categcur",
+          "column_name": "nombre",
+          "column_type": "varchar(80)",
+          "data_type": "varchar",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 2
+        },
+        {
+          "table_name": "categcur",
+          "column_name": "icono",
+          "column_type": "varchar(50)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 3
+        },
+        {
+          "table_name": "certificados",
+          "column_name": "id",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": null,
+          "collation_name": null,
+          "position": 1
+        },
+        {
+          "table_name": "certificados",
+          "column_name": "idsocio",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 2
+        },
+        {
+          "table_name": "certificados",
+          "column_name": "fecha_solicitud",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 3
+        },
+        {
+          "table_name": "certificados",
+          "column_name": "idcurso",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 8
+        },
+        {
+          "table_name": "certificados",
+          "column_name": "fecha_finaliza",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 9
+        },
+        {
+          "table_name": "certificados",
+          "column_name": "estado",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 11
+        },
+        {
+          "table_name": "certificados",
+          "column_name": "fecha_validacion",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 14
+        },
+        {
+          "table_name": "certificados",
+          "column_name": "actanro",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 15
+        },
+        {
+          "table_name": "certificados",
+          "column_name": "newcourseid",
+          "column_type": "varchar(100)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 18
+        },
+        {
+          "table_name": "certifidise",
+          "column_name": "id",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": null,
+          "collation_name": null,
+          "position": 1
+        },
+        {
+          "table_name": "certifidise",
+          "column_name": "idsocio",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 2
+        },
+        {
+          "table_name": "certifidise",
+          "column_name": "fecha_solicitud",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 3
+        },
+        {
+          "table_name": "certifidise",
+          "column_name": "idcurso",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 8
+        },
+        {
+          "table_name": "certifidise",
+          "column_name": "fecha_finaliza",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 9
+        },
+        {
+          "table_name": "certifidise",
+          "column_name": "estado",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 12
+        },
+        {
+          "table_name": "certifidise",
+          "column_name": "fecha_validacion",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 15
+        },
+        {
+          "table_name": "certifidise",
+          "column_name": "actanro",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 16
+        },
+        {
+          "table_name": "certifidise",
+          "column_name": "newcourseid",
+          "column_type": "varchar(100)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 18
+        },
+        {
+          "table_name": "certifisemi",
+          "column_name": "id",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": null,
+          "collation_name": null,
+          "position": 1
+        },
+        {
+          "table_name": "certifisemi",
+          "column_name": "idsocio",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 2
+        },
+        {
+          "table_name": "certifisemi",
+          "column_name": "fecha_solicitud",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 3
+        },
+        {
+          "table_name": "certifisemi",
+          "column_name": "idcurso",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 8
+        },
+        {
+          "table_name": "certifisemi",
+          "column_name": "fecha_finaliza",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 9
+        },
+        {
+          "table_name": "certifisemi",
+          "column_name": "estado",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 11
+        },
+        {
+          "table_name": "certifisemi",
+          "column_name": "fecha_validacion",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 14
+        },
+        {
+          "table_name": "certifisemi",
+          "column_name": "actanro",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 15
+        },
+        {
+          "table_name": "certifisemi",
+          "column_name": "newcourseid",
+          "column_type": "varchar(100)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 17
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "id",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": null,
+          "collation_name": null,
+          "position": 1
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "idsocio",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 2
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "nombre",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 3
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "tipocurso",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 4
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "horas",
+          "column_type": "decimal(6,1)",
+          "data_type": "decimal",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 5
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "fecha_solicitud",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 6
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "fecha_validacion",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 7
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "estado",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 8
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "fecha_vto",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 10
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "programa",
+          "column_type": "varchar(7)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 13
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "cv",
+          "column_type": "varchar(7)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 14
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "observado",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 15
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "categoria",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 16
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "desaprobado",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 18
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "inactivo",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 19
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "mensaje_cert",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 24
+        },
+        {
+          "table_name": "cursos",
+          "column_name": "fecmod",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 25
+        },
+        {
+          "table_name": "socios",
+          "column_name": "id",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "NO",
+          "column_key": "PRI",
+          "character_set": null,
+          "collation_name": null,
+          "position": 1
+        },
+        {
+          "table_name": "socios",
+          "column_name": "nombre",
+          "column_type": "varchar(120)",
+          "data_type": "varchar",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 2
+        },
+        {
+          "table_name": "socios",
+          "column_name": "razonsocial",
+          "column_type": "varchar(120)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 3
+        },
+        {
+          "table_name": "socios",
+          "column_name": "localidad",
+          "column_type": "varchar(50)",
+          "data_type": "varchar",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 11
+        },
+        {
+          "table_name": "socios",
+          "column_name": "provincia",
+          "column_type": "varchar(50)",
+          "data_type": "varchar",
+          "nullable": "NO",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 13
+        },
+        {
+          "table_name": "socios",
+          "column_name": "provincia_cod",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 14
+        },
+        {
+          "table_name": "socios",
+          "column_name": "whatsapp_insti",
+          "column_type": "bigint",
+          "data_type": "bigint",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 15
+        },
+        {
+          "table_name": "socios",
+          "column_name": "mail_insti",
+          "column_type": "varchar(150)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 16
+        },
+        {
+          "table_name": "socios",
+          "column_name": "web",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 18
+        },
+        {
+          "table_name": "socios",
+          "column_name": "facebook",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 19
+        },
+        {
+          "table_name": "socios",
+          "column_name": "instagram",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 20
+        },
+        {
+          "table_name": "socios",
+          "column_name": "youtube",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 21
+        },
+        {
+          "table_name": "socios",
+          "column_name": "twitter",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 22
+        },
+        {
+          "table_name": "socios",
+          "column_name": "linkedin",
+          "column_type": "varchar(200)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_general_ci",
+          "position": 23
+        },
+        {
+          "table_name": "socios",
+          "column_name": "fecha_alta",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 25
+        },
+        {
+          "table_name": "socios",
+          "column_name": "fecha_baja",
+          "column_type": "date",
+          "data_type": "date",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 26
+        },
+        {
+          "table_name": "socios",
+          "column_name": "rubro",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 27
+        },
+        {
+          "table_name": "socios",
+          "column_name": "categoria",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 29
+        },
+        {
+          "table_name": "socios",
+          "column_name": "estado",
+          "column_type": "tinyint(1)",
+          "data_type": "tinyint",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 30
+        },
+        {
+          "table_name": "socios",
+          "column_name": "textoweb",
+          "column_type": "text",
+          "data_type": "text",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 38
+        },
+        {
+          "table_name": "socios",
+          "column_name": "coordenadas",
+          "column_type": "varchar(50)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 39
+        },
+        {
+          "table_name": "socios",
+          "column_name": "mailcomercial",
+          "column_type": "varchar(60)",
+          "data_type": "varchar",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": "utf8mb3",
+          "collation_name": "utf8mb3_spanish_ci",
+          "position": 40
+        },
+        {
+          "table_name": "socios",
+          "column_name": "wscomercial",
+          "column_type": "bigint",
+          "data_type": "bigint",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 41
+        },
+        {
+          "table_name": "socios",
+          "column_name": "pais",
+          "column_type": "int",
+          "data_type": "int",
+          "nullable": "YES",
+          "column_key": "",
+          "character_set": null,
+          "collation_name": null,
+          "position": 49
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "errors": [],
+  "finishedAt": "2026-10-07T18:15:56.156Z",
+  "metadataCheckedAt": "2026-10-07T18:08:57.065Z",
+  "scope": "Metadatos y agregados; sin registros de personas ni secretos",
+  "toolSha256AtDocumentation": {
+    "audit.mjs": "d453b0db290a213278f7fa26d2beee05dd205d6b32b7cb33713ad53df5ba4d8b",
+    "queries.mjs": "6bb8a256f5d5a71fa8301574bea20899af39c94885cb075cfcc00f20cfb5031c",
+    "connection.mjs": "a1b550cb0c2a230343c19365025bf00c73178ca5482aa99dbdc75f4720928f9b",
+    "config.mjs": "81cfacf5f2c3d2a0fc35cb4d291799fb5e9429a61876ccd10bfe2ee0915ddbec"
+  },
+  "toolHashCapturedAt": "2026-10-07T18:37:59.905Z"
+}

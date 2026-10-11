@@ -1,0 +1,183 @@
+/* Cámara identity: observed at camaraargentina.com.ar on 2026-10-05.
+   Official reference colors: #047490 and #0ea7a5. Darker action/text shades
+   preserve readable contrast; the supplied institutional logo stays unchanged. */
+:root{--chamber-blue:#047490;--chamber-teal:#0ea7a5;--chamber-dark:#075567;--chamber-soft:#e9f5f5;--ink:#183f49;--muted:#526d75;--forest:#047490;--lime:#d6f3f0;--paper:#f5f9f9;--line:#d8e6e8;--accent:#047490;font-family:'Open Sans',Arial,sans-serif}
+body{background:var(--paper);color:var(--ink)}
+h1,h2,h3{font-family:'Open Sans',Arial,sans-serif;color:var(--ink);letter-spacing:-.035em}
+h1{font-weight:700}h2,h3{font-weight:650}
+a:hover{color:var(--chamber-dark)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,[tabindex="0"]:focus-visible{outline:3px solid var(--chamber-blue);outline-offset:4px}
+.eyebrow{color:var(--chamber-blue);letter-spacing:.09em}
+.demo-strip{background:#e9f5f5;color:#3d636c;border-bottom:1px solid #daeeee;letter-spacing:.025em}
+
+/* Co-branding puts the Cámara identity before the product name. */
+.header{display:grid;grid-template-columns:minmax(355px,430px) minmax(250px,640px);min-height:110px;height:auto;padding-top:16px;padding-bottom:16px;gap:32px;background:white}
+.header-identity{display:flex;align-items:center;gap:24px;min-width:0}
+.header-identity .header-chamber{order:0}.header-identity .brand{order:1}
+.header-chamber{display:block;flex-shrink:0;max-width:none;margin:0}
+.header-chamber .chamber-logo{width:210px;height:84px}
+.header .brand{padding-left:24px;border-left:1px solid var(--line);gap:0;min-width:0}
+.brand-symbol{display:none}
+.wordmark{font-family:'Open Sans',Arial,sans-serif;font-size:1.8rem;font-weight:750;letter-spacing:-.065em;color:var(--chamber-dark)}
+.brand-dot{color:var(--chamber-teal)}
+.wordmark small{font-family:inherit;font-size:.75rem;letter-spacing:0;color:var(--muted);line-height:1.5;margin-top:5px;max-width:125px}
+#global-search{height:50px;background:#f6fbfb;border-color:#c8dfe2;border-radius:8px;padding-left:18px;align-self:center;box-shadow:none}
+#global-search input{font-size:1rem;color:var(--ink)}
+#global-search input::placeholder{color:#637d85}
+#global-search:focus-within{outline:2px solid var(--chamber-blue);border-color:transparent}
+#global-search button{height:38px;width:48px;margin-right:5px;border:0;border-radius:6px;background:var(--chamber-blue);color:white}
+#global-search button:hover{background:var(--chamber-dark)}
+.market-nav{background:#fff;border-top:1px solid #edf4f4;border-bottom:1px solid var(--line)}
+.market-nav nav a{color:#47616a;font-size:.875rem}
+.market-nav nav a[aria-current=page]{color:var(--chamber-blue)}
+.market-nav nav a[aria-current=page]:after{background:var(--chamber-teal);height:3px}
+.market-nav>span{color:#546f77;font-size:.8125rem}
+.category-rail a{background:white;border-color:var(--line);border-radius:20px;color:#45636d;font-size:.875rem}
+.category-rail a.selected{background:var(--chamber-blue);border-color:var(--chamber-blue)}
+.category-rail a:hover:not(.selected){border-color:#82bdc5;color:var(--chamber-dark);background:var(--chamber-soft)}
+
+/* The short teal banner keeps search and results near the first viewport. */
+.discovery-banner{background:var(--chamber-blue);grid-template-columns:55% 45%;border-radius:14px;box-shadow:0 8px 24px #0755670c}
+.banner-copy{padding:28px 34px;z-index:2}
+.banner-copy h1{font-family:'Open Sans',Arial,sans-serif;color:white;font-size:1.9rem;font-weight:700;letter-spacing:-.04em;line-height:1.25}
+.banner-copy h1 em{color:#c8f6f1;font-weight:600}
+.banner-copy p{color:#e1f5f6;font-size:1rem;line-height:1.6;max-width:460px}
+.banner-video{color:#fff;font-size:.875rem;margin-top:16px}
+.banner-video svg{background:#ffffffed;color:var(--chamber-blue)}
+.banner-photo:before{background:linear-gradient(90deg,#047490 0%,#0474908c 24%,#0ea7a52b 100%)}
+.banner-stamp{background:#fffffff2;border:1px solid #d6eeee;color:var(--muted);box-shadow:0 6px 20px #06445116;border-radius:8px}
+.banner-stamp svg,.banner-stamp strong{color:var(--chamber-blue)}
+.trust-rail{border-color:var(--line);background:white;border-radius:10px;padding:18px 8px}
+.trust-rail>div{color:var(--chamber-blue);border-color:var(--line)}
+.trust-rail strong{color:var(--ink);font-size:.875rem}
+.trust-rail span{color:var(--muted);font-size:.8125rem}
+
+/* Catalogue, filters and cards share one readable institutional palette. */
+.market-filters .filter-head h2,.market-filters h3,.market-filters label[for]{color:var(--ink)}
+.market-filters .check-label,.market-filters select,.market-filters .filter-head button,.sort-label,.sort-label select{color:var(--muted);font-size:.875rem}
+.market-filters .check-label input{accent-color:var(--chamber-blue)}
+.market-filters select,.sort-label select{border-color:#cbdfe2}
+.filter-help{background:var(--chamber-soft);border-color:#d1e8e9;color:var(--muted)}
+.filter-help strong,.filter-help a,.filter-help>svg{color:var(--chamber-blue)}
+.filter-help p,.filter-help a{font-size:.875rem}
+.market-results .results-head h1,.market-results .results-head h2{font-family:'Open Sans',Arial,sans-serif;font-weight:700;color:var(--ink)}
+.market-results .results-head .eyebrow,.market-results .results-head p,.market-filters .count{color:var(--muted)}
+.market-workspace .mobile-filter-toggle{border-color:var(--line);color:var(--chamber-blue)}
+.chip{background:#e0f2f1;color:var(--chamber-dark)}
+.product-card{border-color:var(--line);border-radius:12px;box-shadow:0 3px 12px #174f5805}
+.product-card:hover{border-color:#89bac3;box-shadow:0 8px 25px #174f5810}
+.cover-category{color:var(--chamber-dark);background:#fffffff2}
+.cover-video{background:#074e64df}
+.product-body h3{font-family:'Open Sans',Arial,sans-serif;font-weight:700;color:var(--ink)}
+.product-body h3 a:hover{color:var(--chamber-blue)}
+.institution-identity>span:last-child{color:var(--muted);font-size:.875rem}
+.product-outcome{color:#395b65;font-size:.9375rem}
+.product-outcome strong{color:var(--chamber-blue)}
+.product-rating strong,.product-meta,.review-count,.product-price>small,.product-price strong small,.source-note{color:var(--muted)}
+.product-meta,.review-count,.certificate-tag,.product-bottom .button{font-size:.875rem}
+.certificate-tag,.certificate-tag svg{color:var(--chamber-blue)}
+.product-bottom{border-color:var(--line)}
+.product-price>strong,.purchase-price{color:var(--chamber-dark)}
+.button{background:var(--chamber-blue);border-radius:7px;color:#fff;font-weight:600;box-shadow:none}
+.button:hover{background:var(--chamber-dark);color:#fff}
+.button.secondary{background:#f4fbfb;border-color:#a9cfd4;color:var(--chamber-dark)}
+.button.secondary:hover{background:#e5f4f3;border-color:var(--chamber-blue)}
+.text-link,.text-button,.breadcrumb a{color:var(--chamber-blue)}
+.small,.breadcrumb{color:var(--muted)}
+
+/* Detail pages, institutional seals and supporting documentation. */
+.course-heading h1,.course-content .section h2,.seller-heading h3,.related-courses .section-title h2{color:var(--ink)}
+.course-heading .eyebrow,.course-head-meta>span,.course-result-lead{color:var(--muted)}
+.course-content .section h2{font-weight:650}
+.detail-tabs{border-color:var(--line)}
+.detail-tabs button{color:var(--chamber-blue);font-weight:600}
+.detail-tabs button:hover{color:var(--chamber-dark)}
+.learning-skills>span{background:#e6f3f2;color:#1d606e;border:1px solid #d3e9e9}
+.course-objectives>p,.course-audience-list,.outcome-list li{color:#365761}
+.course-audience-list li::marker{color:var(--chamber-teal)}
+.project-example,.audience-box{background:#eaf6f5;border:1px solid #d7ebeb}
+.project-example>svg,.project-example .eyebrow,.audience-box h3,.course-evaluation strong{color:var(--chamber-blue)}
+.project-example p,.audience-box p,.detail-lead,.seller-detail>p,.review-panel p,.certification-block p,.media-dialog p{color:var(--muted)}
+.course-evaluation{border-color:#cee3e5}
+.outcome-check{color:var(--chamber-dark);background:#d9f2ec}
+.syllabus,.syllabus li,.seller-detail,.review-panel,.purchase-panel{border-color:var(--line)}
+.syllabus li:before{color:var(--chamber-blue)}
+.certification-block{border-color:#b9dfe1;border-top:4px solid var(--chamber-teal)}
+.certificate-symbol{background:#e2f4f2;color:var(--chamber-blue)}
+.certification-block .eyebrow{color:var(--chamber-blue)}
+.certification-block h2{color:var(--chamber-dark)!important}
+.certification-block .small,.payment-note,.purchase-features,.purchase-disclaimer,.seller-heading p,.seller-detail>.small{color:var(--muted)}
+.purchase-panel{border-top:4px solid var(--chamber-teal);box-shadow:0 6px 24px #194c5508}
+.purchase-features svg,.gallery-play>svg{color:var(--chamber-blue)}
+.gallery-thumb.selected{border-color:var(--chamber-teal)}
+.gallery-thumb.video-thumb{background:var(--chamber-soft);border-color:var(--line);color:var(--chamber-blue)}
+.social-button{color:var(--chamber-blue);border-color:var(--line);font-size:.875rem}
+.social-button:hover{color:var(--chamber-dark);background:var(--chamber-soft);border-color:#93c5cc}
+.formative-credential{--seal-ink:#145362;--seal-color:#047490;--seal-pale:#edf8f7;--seal-line:#c8e3e5}
+.formative-credential.pending{--seal-ink:#52646a;--seal-color:#6b7d83;--seal-pale:#f1f5f5;--seal-line:#dbe4e6}
+.credential-label,.credential-description,.credential-count,.credential-brand,.credential-topline,.credential-scale>span,.level-range{color:var(--muted)}
+.credential-footer{border-color:var(--line)}
+.school-card,.school-social-bar,.breakdown,.stat,.content-panel{border-color:var(--line)}
+.school-hero{background:#e4f2f3;border:1px solid #cee4e7;border-radius:14px}
+.school-hero h1,.school-brand h3,.school-intro>span,.school-hero-meta .institution-level-label{color:var(--chamber-dark)}
+.school-hero .eyebrow,.school-hero p,.school-hero-meta>span,.school-social-bar,.school-card>p,.school-intro p,.school-facts,.institution-credential-context p,.institution-credential-context li{color:var(--muted)}
+.school-hero-photo:before{background:linear-gradient(90deg,#e4f2f3,transparent)}
+.institution-score-note{background:var(--chamber-soft);color:var(--chamber-dark)}
+.institution-credential-context li svg{color:var(--chamber-blue)}
+.bar{background:#e5eeee}.bar span{background:var(--chamber-teal)}
+.page-heading h1{color:var(--chamber-dark)}
+.notice{color:#275d68;background:#e9f5f4;border:1px solid #cfe7e7}
+.content-panel{box-shadow:0 3px 16px #164e5804}
+.weight-row strong{color:var(--chamber-blue)}
+th{background:#e8f3f3;color:var(--chamber-dark)}
+th,td,.table-wrap,details{border-color:var(--line)}
+.development-spec .spec-phase{background:#e1f3f2;color:var(--chamber-dark)}
+.development-spec .spec-example{border-top-color:var(--chamber-teal)}
+.development-spec .spec-decisions{border-left-color:var(--chamber-teal)}
+.development-spec tfoot th,.development-spec tfoot td{background:#e8f3f3}
+.related-courses{border-top-color:#c7dfe1}
+.relevance-note{color:var(--muted)}
+dialog{border-top:5px solid var(--chamber-teal);border-radius:14px;color:var(--ink)}
+dialog::backdrop{background:#073f50bd}
+
+footer{background:var(--chamber-dark);border-top:4px solid var(--chamber-teal);color:#e0f2f3;padding-top:32px;padding-bottom:28px;gap:24px}
+footer .footer-brand{display:flex;align-items:center;gap:20px;color:white;font-family:'Open Sans',Arial,sans-serif}
+.footer-brand .chamber-logo{width:155px;height:auto;padding:6px;background:#fff;border-radius:5px}
+footer>span{max-width:350px;line-height:1.6}
+footer>a:not(.footer-brand){color:#fff;font-size:.875rem;text-decoration:underline;text-underline-offset:4px}
+footer>a:hover{color:#bcefeb}
+footer small{color:#bedcde;font-size:.8125rem;border-top:1px solid #ffffff26;padding-top:18px}
+
+@media(max-width:1050px){
+ .header{grid-template-columns:minmax(325px,365px) minmax(230px,1fr);gap:24px}
+ .header-identity{gap:18px}.header .brand{padding-left:18px}.header-chamber .chamber-logo{width:185px;height:74px}
+ .banner-copy{padding:26px}.banner-copy h1{font-size:1.65rem}.banner-copy p{font-size:.9375rem}
+}
+@media(max-width:760px){
+ .header{display:flex;flex-direction:column;align-items:stretch;gap:16px;padding:13px 20px 18px}
+ .header-identity{justify-content:space-between;gap:18px}
+ .header-chamber .chamber-logo{width:178px;height:71px}
+ .header .brand{padding-left:20px}.wordmark{font-size:1.65rem}.wordmark small{font-size:.75rem;max-width:100px}
+ .header #global-search{height:48px;margin:0;align-self:stretch}.header #global-search input{font-size:.875rem}
+ .market-nav nav{gap:18px}.market-nav nav a{font-size:.875rem}
+ .category-rail a{font-size:.875rem;padding:9px 13px}
+ .discovery-banner{grid-template-columns:65% 35%;border-radius:12px}
+ .banner-copy{padding:23px 20px}.banner-copy h1{font-size:1.5rem}.banner-copy p{font-size:.9375rem}
+ .banner-video{font-size:.875rem;line-height:1.45}
+ .banner-photo:before{background:linear-gradient(90deg,#047490 0%,#04749045 85%)}
+ .trust-rail{padding:16px;gap:14px}.trust-rail strong{font-size:.875rem}.trust-rail span{font-size:.8125rem}
+ .product-bottom .button{font-size:.875rem}.product-meta,.review-count{font-size:.8125rem}
+ .course-heading h1{font-size:1.8rem}.course-content .section h2{font-size:1.35rem}
+ footer>span{width:100%;max-width:420px}footer>a:last-of-type{margin-left:0}
+}
+@media(max-width:460px){
+ .header-chamber .chamber-logo{width:155px;height:63px}.header-identity{gap:14px}.header .brand{padding-left:16px}
+ .wordmark{font-size:1.6rem}.wordmark small{font-size:.75rem;max-width:100px}
+ .market-nav nav{gap:12px}.market-nav nav a{font-size:.8125rem}
+ .discovery-banner{grid-template-columns:1fr}.banner-photo{display:none}
+ .banner-copy{padding:24px}.banner-copy h1{font-size:1.65rem}.banner-copy p{font-size:.9375rem}
+ .banner-video{margin-top:16px}.product-body h3{font-size:1.1rem}
+ .product-price>strong{font-size:1.3rem}.product-bottom .button{min-width:100px}
+ .footer-brand .chamber-logo{width:145px}
+}
+@media(max-width:350px){.header-chamber .chamber-logo{width:135px}.header .brand{padding-left:12px}.wordmark{font-size:1.45rem}.wordmark small{max-width:88px}.header-identity{gap:10px}}

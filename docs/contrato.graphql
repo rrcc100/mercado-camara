@@ -1,0 +1,334 @@
+# BORRADOR v0.2 — auditoría real del 2026-10-07. Ver camara/MAPEO-PORTAL.md.
+# No existe servidor GraphQL implementado. La publicación es independiente de Approved/Active.
+# Las queries públicas coinciden con src/data/graphql/repository.ts.
+scalar DateTime
+enum PublicationStatus {
+  PUBLISHED
+  UNAVAILABLE
+}
+enum CourseMode {
+  ONLINE
+  HYBRID
+  ONSITE
+}
+enum AssessmentLevel {
+  BASE
+  SOLIDITY
+  DISTINCTION
+  REFERENCE
+  PENDING
+}
+enum AssessmentStage {
+  INITIAL
+  EARLY
+  ESTABLISHED
+  PENDING
+}
+enum LeadStatus {
+  NEW
+  FOLLOWING_UP
+  ENROLLED
+  CLOSED
+}
+enum PublicationAction {
+  ACTIVATE
+  DEACTIVATE
+}
+type Assessment {
+  level: AssessmentLevel!
+  stage: AssessmentStage!
+  rationale: String!
+  reviewedAt: DateTime
+  methodologyVersion: String!
+}
+type SocialLink {
+  network: String!
+  url: String!
+}
+type Institution {
+  id: ID!
+  slug: String!
+  name: String!
+  description: String
+  specialty: String
+  city: String
+  province: String
+  foundedYear: Int
+  memberSince: String
+  logo: String
+  demo: Boolean!
+  website: String
+  socials: [SocialLink!]!
+  assessment: Assessment
+}
+type Video {
+  youtubeId: String!
+  title: String!
+  author: String!
+  demo: Boolean!
+}
+type Category {
+  id: ID!
+  slug: String!
+  name: String!
+  description: String
+}
+type CourseModule {
+  id: ID!
+  title: String!
+  content: String
+  order: Int!
+}
+# Solo después de verificación explícita de la oferta de certificado para esta versión.
+type CertificateOffer {
+  label: String!
+  issuerName: String!
+  chamberIssued: Boolean!
+}
+type Course {
+  id: ID!
+  slug: String!
+  title: String!
+  versionId: ID
+  versionNumber: Int
+  category: String
+  categoryLabel: String
+  institution: Institution!
+  status: PublicationStatus!
+  mode: CourseMode
+  location: String
+  hours: Float
+  weeks: Float
+  price: Float
+  currency: String
+  difficulty: String
+  description: String
+  modules: [CourseModule!]!
+  objectives: String
+  audience: [String!]!
+  outcomes: [String!]!
+  skills: [String!]!
+  project: String
+  evaluation: String
+  prerequisites: String
+  certificate: CertificateOffer
+  cover: String
+  coverAlt: String
+  video: Video
+  updatedAt: DateTime
+  demo: Boolean!
+}
+input CatalogFilterInput {
+  q: String
+  category: String
+  mode: String
+  province: String
+  level: String
+  duration: String
+  sort: String
+  page: Int = 1
+}
+type CatalogResult {
+  items: [Course!]!
+  total: Int!
+  page: Int!
+  pageSize: Int!
+  provinces: [String!]!
+  categories: [Category!]!
+}
+type PublishedSlugs {
+  courses: [String!]!
+  institutions: [String!]!
+}
+type Query {
+  categories: [Category!]!
+  catalog(filter: CatalogFilterInput!): CatalogResult!
+  course(slug: String!): Course
+  institutions: [Institution!]!
+  institution(slug: String!): Institution
+  institutionCourses(id: ID!): [Course!]!
+  relatedCourses(id: ID!, limit: Int = 3): [Course!]!
+  publishedSlugs: PublishedSlugs!
+  # Privado: institución derivada de la sesión; nunca de un ID enviado por el cliente.
+  myProfile: MemberProfile!
+  myLeads(filter: LeadFilterInput!): LeadConnection!
+  myCourses(page: Int = 1): MemberCoursePage!
+}
+# Propuesta futura de autogestión. No implementada ni invocada por el frontend.
+enum FieldAvailability {
+  ABSENT_IN_SOURCE
+  INCOMPLETE
+  UNCONFIRMED
+  INVALID
+}
+type FieldIssue {
+  field: String!
+  code: String!
+  availability: FieldAvailability!
+  message: String!
+}
+type MemberProfile {
+  institutionId: ID!
+  revision: String!
+  publicProfile: Institution!
+  publicContactConsent: Boolean!
+  missingFields: [FieldIssue!]!
+  reviewStatus: String!
+}
+input SocialLinkInput {
+  network: String!
+  url: String!
+}
+input ProfileDraftInput {
+  expectedRevision: String!
+  name: String
+  description: String
+  specialty: String
+  city: String
+  province: String
+  foundedYear: Int
+  publicEmail: String
+  publicWhatsApp: String
+  publicContactConsent: Boolean
+  logoAssetId: ID
+  website: String
+  socials: [SocialLinkInput!]
+}
+type ProfileDraftPayload {
+  profile: MemberProfile
+  errors: [FieldIssue!]!
+}
+input CourseModuleInput {
+  id: ID
+  title: String!
+  content: String
+  order: Int!
+}
+input CourseDraftInput {
+  courseId: ID!
+  expectedRevision: String!
+  versionId: ID!
+  categoryId: ID
+  location: String
+  difficulty: String
+  title: String
+  description: String
+  objectives: String
+  audience: [String!]
+  outcomes: [String!]
+  skills: [String!]
+  modules: [CourseModuleInput!]
+  prerequisites: String
+  project: String
+  evaluation: String
+  mode: CourseMode
+  hours: Float
+  weeks: Float
+  price: Float
+  currency: String
+}
+type MemberCourse {
+  courseId: ID!
+  slug: String!
+  title: String!
+  revision: String!
+  publicationState: String!
+  missingFields: [FieldIssue!]!
+}
+type MemberCoursePage {
+  items: [MemberCourse!]!
+  total: Int!
+  page: Int!
+  pageSize: Int!
+}
+type CourseDraftPayload {
+  course: MemberCourse
+  errors: [FieldIssue!]!
+}
+input SetPublicationInput {
+  courseId: ID!
+  action: PublicationAction!
+  expectedRevision: String!
+  idempotencyKey: String!
+}
+type PublicationPayload {
+  course: MemberCourse
+  applied: Boolean!
+  errors: [FieldIssue!]!
+}
+input CreateLeadInput {
+  courseId: ID!
+  name: String!
+  email: String!
+  phone: String
+  message: String!
+  consentAccepted: Boolean!
+  consentVersion: String!
+  idempotencyKey: String!
+}
+type LeadReceipt {
+  id: ID!
+  createdAt: DateTime!
+}
+type CreateLeadPayload {
+  receipt: LeadReceipt
+  errors: [FieldIssue!]!
+}
+input LeadFilterInput {
+  courseId: ID
+  status: LeadStatus
+  from: DateTime
+  to: DateTime
+  first: Int = 25
+  after: String
+}
+type Lead {
+  id: ID!
+  courseId: ID!
+  institutionId: ID!
+  name: String!
+  email: String!
+  phone: String
+  message: String!
+  origin: String!
+  status: LeadStatus!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  revision: String!
+  notes: [LeadNote!]!
+}
+type LeadNote {
+  text: String!
+  createdAt: DateTime!
+  actorId: ID!
+}
+type LeadEdge {
+  cursor: String!
+  node: Lead!
+}
+type PageInfo {
+  endCursor: String
+  hasNextPage: Boolean!
+}
+type LeadConnection {
+  edges: [LeadEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+input UpdateLeadInput {
+  leadId: ID!
+  expectedRevision: String!
+  status: LeadStatus!
+  note: String
+}
+type UpdateLeadPayload {
+  lead: Lead
+  errors: [FieldIssue!]!
+}
+type Mutation {
+  saveMyProfileDraft(input: ProfileDraftInput!): ProfileDraftPayload!
+  saveMyCourseDraft(input: CourseDraftInput!): CourseDraftPayload!
+  setCoursePublication(input: SetPublicationInput!): PublicationPayload!
+  createLead(input: CreateLeadInput!): CreateLeadPayload!
+  updateMyLead(input: UpdateLeadInput!): UpdateLeadPayload!
+}

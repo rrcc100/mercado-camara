@@ -1,0 +1,36 @@
+.development-spec { max-width: 1260px; }
+.development-spec .spec-navigation { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 12px; margin-top: 22px; }
+.development-spec #spec-architecture, .development-spec #spec-evaluation, .development-spec #spec-self-service { scroll-margin-top: 24px; }
+.development-spec .section > p { color: var(--muted); max-width: 850px; }
+.development-spec .content-panel p + p { margin-top: 16px; }
+.development-spec .content-panel ul, .development-spec .content-panel ol { margin-bottom: 0; }
+.development-spec .spec-block { margin-top: 20px; }
+.development-spec .spec-table { margin-top: 20px; }
+.development-spec table { font-size: 1rem; }
+.development-spec table caption { text-align: left; padding: 16px; color: var(--muted); font-size: .875rem; }
+.development-spec th[scope="row"] { background: white; width: 46%; }
+.development-spec td { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); }
+.development-spec tfoot th, .development-spec tfoot td { background: #edf1fc; font-weight: 700; border-top: 1px solid var(--line); }
+.development-spec .spec-note { margin-top: 16px; font-size: .9375rem; color: var(--muted); }
+.development-spec .spec-table-hint { display: none; }
+.development-spec .roadmap .eyebrow { font-size: .875rem; line-height: 1.5; }
+.development-spec .roadmap p { font-size: 1rem; }
+.development-spec .spec-phase { display: inline-block; background: #edf1fc; color: #243672; border-radius: 6px; padding: 6px 10px; font-size: .875rem; margin-bottom: 16px; }
+.development-spec .spec-example { border-top: 4px solid #586ec0; }
+.development-spec .spec-example p + p { padding-top: 16px; border-top: 1px solid var(--line); }
+.development-spec details li { margin: 12px 0; color: var(--muted); }
+.development-spec details ul, .development-spec details ol { padding-left: 22px; }
+.development-spec code { font-size: .9375rem; overflow-wrap: anywhere; }
+.development-spec .spec-decisions { border-left: 4px solid #586ec0; }
+.development-spec .spec-return { margin-top: 28px; }
+.development-link { margin-top: 24px; }
+.development-link p { margin: 12px 0 18px; }
+@media (max-width: 760px) {
+  .development-spec .table-wrap { max-width: 100%; }
+  .development-spec table { min-width: 620px; font-size: .9375rem; }
+  .development-spec th, .development-spec td { padding: 12px; }
+  .development-spec th[scope="row"] { width: 34%; }
+  .development-spec .spec-table-hint { display: block; margin-top: 10px; font-size: .875rem; }
+  .development-spec .content-panel { padding: 20px; }
+  .development-spec h2 { font-size: 1.35rem; }
+}

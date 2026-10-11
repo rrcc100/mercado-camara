@@ -1,0 +1,42 @@
+name: mercado-camara
+
+services:
+  frontend:
+    image: mercado-camara-frontend:local
+    build:
+      context: .
+      target: runner
+    ports:
+      - "127.0.0.1:${APP_PORT:-3010}:3000"
+    environment:
+      DATA_SOURCE: ${DATA_SOURCE:-demo}
+      SITE_URL: ${SITE_URL:-http://localhost:${APP_PORT:-3010}}
+      GRAPHQL_ENDPOINT: ${GRAPHQL_ENDPOINT:-}
+      ALLOW_INDEXING: ${ALLOW_INDEXING:-false}
+      CONTENT_APPROVED: ${CONTENT_APPROVED:-false}
+    init: true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/robots.txt').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+
+  camara-audit:
+    profiles: ["tools"]
+    image: mercado-camara-audit:local
+    build:
+      context: .
+      target: audit
+    init: true
+    volumes:
+      - type: bind
+        source: ./.secrets/camara.json
+        target: /app/.secrets/camara.json
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./reports/camara-audit
+        target: /app/reports/camara-audit

@@ -1,0 +1,14 @@
+{
+  "HOST_CAMARA": "",
+  "USER_CAMARA": "",
+  "PASS_CAMARA": "",
+  "DB_CAMARA_SOCIOS": "",
+  "DB_CAMARA_CURSOS": "",
+  "CAMARA_DB_HOST": "",
+  "CAMARA_DB_PORT": "",
+  "CAMARA_DB_NAME": "",
+  "CAMARA_DB_USER": "",
+  "CAMARA_DB_PASSWORD": "",
+  "CAMARA_DB_SSL": "",
+  "CAMARA_DB_AUTH_PLUGIN": ""
+}

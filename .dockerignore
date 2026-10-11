@@ -1,0 +1,17 @@
+# Allowlist: secrets, env files, reports, references and host node_modules
+# never enter the build context, including for the optional audit target.
+**
+!Dockerfile
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!next.config.ts
+!tsconfig.json
+!next-env.d.ts
+!src/
+!src/**
+!public/
+!public/**
+!scripts/
+!scripts/camara/
+!scripts/camara/**

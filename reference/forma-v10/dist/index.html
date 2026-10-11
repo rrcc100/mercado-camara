@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#047490">
+  <meta name="description" content="Explorá cursos de educación no formal y conocé la trayectoria de sus instituciones. Prototipo de la Cámara con datos de ejemplo.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23047490'/%3E%3Cpath d='M8 23V9h16v4H12v3h10v4H12v3Z' fill='%23ffffff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css?v=8">
+  <link rel="stylesheet" href="./marketplace.css?v=8">
+  <link rel="stylesheet" href="./formative.css">
+  <link rel="stylesheet" href="./related-courses.css?v=7">
+  <link rel="stylesheet" href="./development-spec.css?v=10">
+  <link rel="stylesheet" href="./chamber-theme.css?v=8">
+  <title>Forma · Cursos de la Cámara</title>
+</head>
+<body>
+  <a class="skip" href="#main">Ir al contenido</a>
+  <div class="demo-strip">PROTOTIPO <span>Instituciones, cursos y valoraciones de ejemplo. No representa una evaluación de socios reales.</span></div>
+  <header class="header">
+    <div class="header-identity"><a class="header-chamber" href="#/niveles" aria-label="Cámara Argentina: criterios del sello formativo"><img class="chamber-logo" src="./assets/camara-argentina-logo.png" width="1600" height="642" alt="Cámara Argentina para la Formación Profesional y la Capacitación Laboral"></a><a href="#/buscar" class="brand" aria-label="Forma, inicio"><span class="brand-symbol" aria-hidden="true">f</span><span class="wordmark">forma<span class="brand-dot">.</span><small>Cursos de la Cámara</small></span></a></div>
+    <form id="global-search" role="search"><label class="sr-only" for="global-query">¿Qué querés aprender?</label><input id="global-query" name="q" type="search" placeholder="Buscá cursos, habilidades o institutos" autocomplete="off"><button aria-label="Buscar cursos" type="submit"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg></button></form>
+  </header>
+  <div class="market-nav"><nav aria-label="Principal"><a href="#/buscar" data-nav="buscar">Explorar cursos</a><a href="#/instituciones" data-nav="instituciones">Instituciones</a><a href="#/niveles" data-nav="niveles">Sello formativo</a></nav><span>Educación no formal · Argentina</span></div>
+  <main id="main" tabindex="-1"></main>
+  <footer><a href="#/buscar" class="footer-brand" aria-label="Forma · Cursos de la Cámara"><img class="chamber-logo" src="./assets/camara-argentina-logo.png" width="1600" height="642" alt="Cámara Argentina"><span>forma.</span></a><span>Una propuesta de la Cámara para conectar personas con formación.</span><a href="#/propuesta">Ver propuesta del proyecto</a><a href="#/propuesta/desarrollo">Guía para desarrollo</a><small>Diseño conceptual · Octubre 2026 · Marca de trabajo</small></footer>
+  <dialog id="contact-dialog" aria-labelledby="contact-title"><form method="dialog"><button class="close" aria-label="Cerrar">×</button></form><span class="eyebrow">CONSULTA AL INSTITUTO</span><h2 id="contact-title">Encontraste tu próximo curso</h2><p id="contact-course"></p><div class="notice">Esta es una demostración. En la versión real, podrás consultar al instituto por su canal institucional verificado. No se envían mensajes ni se recogen datos personales.</div><form method="dialog"><button class="button">Seguir explorando</button></form></dialog>
+  <dialog id="media-dialog" class="media-dialog" aria-labelledby="media-title"><form method="dialog"><button class="close" aria-label="Cerrar material audiovisual">×</button></form><span class="eyebrow">CONOCÉ ANTES DE ELEGIR</span><h2 id="media-title">Material audiovisual</h2><div id="media-content"></div></dialog>
+  <dialog id="social-dialog" aria-labelledby="social-title"><form method="dialog"><button class="close" aria-label="Cerrar redes sociales">×</button></form><span class="eyebrow">CONECTÁ CON EL INSTITUTO</span><h2 id="social-title">Redes sociales</h2><p id="social-description"></p><div class="notice">Perfil ficticio: el enlace está pendiente de configuración. En el catálogo real, este acceso abrirá la cuenta institucional informada por el socio.</div><form method="dialog"><button class="button">Entendido</button></form></dialog>
+  <script type="module" src="./app.js?v=10"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+storeDir: .pnpm-store
+nodeLinker: hoisted
+saveExact: true
+managePackageManagerVersions: false
+allowBuilds:
+  unrs-resolver: true
+  sharp: true
+  esbuild: true

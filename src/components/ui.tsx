@@ -1,0 +1,407 @@
+import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Award,
+  BookOpen,
+  BriefcaseBusiness,
+  ChefHat,
+  Clock3,
+  Code2,
+  Globe2,
+  MapPin,
+  Megaphone,
+  Monitor,
+  Search,
+  Wrench,
+} from "lucide-react";
+import {
+  type Category,
+  categoryName,
+  levelNames,
+  modeName,
+  durationText,
+  institutionLocation,
+  money,
+  stageNames,
+  type Course,
+  type Institution,
+} from "@/domain/catalog";
+import { config } from "@/lib/config";
+
+export const categoryIcons = {
+  tecnologia: Code2,
+  administracion: BriefcaseBusiness,
+  comunicacion: Megaphone,
+  oficios: Wrench,
+  idiomas: Globe2,
+  gastronomia: ChefHat,
+};
+export function ChamberLogo({ small = false }: { small?: boolean }) {
+  return (
+    <Image
+      className={small ? "chamber-logo small" : "chamber-logo"}
+      src="/assets/camara-argentina-logo.png"
+      width={1600}
+      height={642}
+      sizes={small ? "133px" : "188px"}
+      alt="Cámara Argentina para la Formación Profesional y la Capacitación Laboral"
+      priority={!small}
+    />
+  );
+}
+export function SearchForm({
+  value = "",
+  large = false,
+}: {
+  value?: string;
+  large?: boolean;
+}) {
+  return (
+    <form
+      className={`search-form ${large ? "large" : ""}`}
+      action="/cursos"
+      role="search"
+    >
+      <Search size={21} aria-hidden />
+      <input
+        type="search"
+        name="q"
+        aria-label="¿Qué querés aprender?"
+        placeholder="¿Qué querés aprender?"
+        defaultValue={value}
+        maxLength={160}
+      />
+      <button type="submit" className="button">
+        Buscar <ArrowRight size={17} aria-hidden />
+      </button>
+    </form>
+  );
+}
+export function Header() {
+  return (
+    <>
+      <div className="demo-bar">
+        {config().demo ? (
+          <>
+            <span className="status-dot" /> Versión de demostración{" "}
+            <span className="demo-extra">
+              · Cursos, instituciones y precios ficticios
+            </span>
+          </>
+        ) : (
+          "Formación profesional y capacitación laboral"
+        )}
+      </div>
+      <header className="site-header">
+        <div className="container header-main">
+          <Link href="/" className="identity" aria-label="Forma, inicio">
+            <ChamberLogo />
+            <span className="wordmark">
+              forma<span>Cursos de la Cámara</span>
+            </span>
+          </Link>
+          <div className="header-search">
+            <SearchForm />
+          </div>
+        </div>
+        <nav className="container main-nav" aria-label="Navegación principal">
+          <Link href="/cursos">Explorar cursos</Link>
+          <Link href="/instituciones">Instituciones</Link>
+          <Link href="/el-sello">El sello formativo</Link>
+          <span className="nav-note">
+            <BookOpen size={15} aria-hidden /> Tu próximo paso empieza
+            aprendiendo
+          </span>
+        </nav>
+      </header>
+    </>
+  );
+}
+export function Footer() {
+  return (
+    <footer className="site-footer">
+      <div className="container footer-main">
+        <div>
+          <Link href="/" className="footer-identity">
+            <ChamberLogo small />
+            <strong>forma</strong>
+          </Link>
+          <p>
+            Conectamos tus ganas de aprender
+            <br />
+            con nuevas posibilidades.
+          </p>
+        </div>
+        <div>
+          <span className="footer-label">EXPLORÁ</span>
+          <Link href="/cursos">Todos los cursos</Link>
+          <Link href="/instituciones">Instituciones</Link>
+          <Link href="/el-sello">Sello de Desarrollo Formativo</Link>
+        </div>
+        <div className="footer-about">
+          <span className="footer-label">UN ESPACIO DE LA CÁMARA</span>
+          <p>
+            Formación profesional y capacitación laboral para acompañar tu
+            desarrollo.
+          </p>
+          {config().demo && (
+            <small>
+              Demo local. No se realizan inscripciones, cobros ni envíos de
+              consultas.
+            </small>
+          )}
+        </div>
+      </div>
+      <div className="container footer-bottom">
+        <span>Forma · Mercado Cámara</span>
+        <span>
+          {config().demo
+            ? "Contenido ilustrativo · No representa oferta real"
+            : "Cámara Argentina"}
+        </span>
+      </div>
+    </footer>
+  );
+}
+export function Breadcrumbs({
+  items,
+}: {
+  items: { label: string; href?: string }[];
+}) {
+  return (
+    <nav className="breadcrumbs" aria-label="Ruta de navegación">
+      <ol>
+        <li>
+          <Link href="/">Inicio</Link>
+        </li>
+        {items.map((item, i) => (
+          <li key={i}>
+            {item.href ? (
+              <Link href={item.href}>{item.label}</Link>
+            ) : (
+              <span aria-current="page">{item.label}</span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  );
+}
+export function InstitutionLogo({
+  institution,
+  size = 44,
+}: {
+  institution: Institution;
+  size?: number;
+}) {
+  if (!institution.logo)
+    return (
+      <span
+        className="institution-logo logo-placeholder"
+        role="img"
+        aria-label={`Logo no disponible de ${institution.name}`}
+        style={{ width: size, height: size }}
+      >
+        —
+      </span>
+    );
+  return (
+    <Image
+      className="institution-logo"
+      src={institution.logo}
+      alt={`Logo de ${institution.name}${institution.demo ? " (ficticio)" : ""}`}
+      width={size}
+      height={size}
+    />
+  );
+}
+export function Credential({
+  institution,
+  full = false,
+}: {
+  institution: Institution;
+  full?: boolean;
+}) {
+  if (!institution.assessment)
+    return (
+      <div className="credential subtle-box">
+        <strong>Sin evaluación institucional publicada</strong>
+        <small>La falta de evaluación no representa un nivel de calidad.</small>
+      </div>
+    );
+  const { level, stage, rationale, reviewedAt } = institution.assessment;
+  const ordinal =
+    ["BASE", "SOLIDITY", "DISTINCTION", "REFERENCE"].indexOf(level) + 1;
+  return (
+    <div className={`credential ${full ? "full" : "compact"}`}>
+      <div className="credential-main">
+        <span className="credential-emblem">
+          <BookOpen size={18} aria-hidden />
+          <b>{ordinal ? ["I", "II", "III", "IV"][ordinal - 1] : "—"}</b>
+        </span>
+        <div>
+          <span className="micro">
+            SELLO FORMATIVO{institution.demo ? " · EJEMPLO" : ""}
+          </span>
+          <strong>{levelNames[level]}</strong>
+          <small>{stageNames[stage]}</small>
+        </div>
+        {!full && <Award size={24} className="credential-award" aria-hidden />}
+      </div>
+      {full && (
+        <>
+          <div
+            className="credential-scale"
+            aria-label={
+              ordinal
+                ? `Nivel ${ordinal} de 4`
+                : "En evaluación, sin nivel asignado"
+            }
+          >
+            {["Base", "Solidez", "Distinción", "Referente"].map((label, i) => (
+              <span key={label} className={i < ordinal ? "filled" : ""}>
+                <i />
+                {label}
+              </span>
+            ))}
+          </div>
+          <p>{rationale}</p>
+          <small>
+            {reviewedAt
+              ? `Revisión: ${reviewedAt}`
+              : "Sin fecha de revisión real"}
+          </small>
+          <div className="credential-bottom">
+            <ChamberLogo small />
+            <Link href="/el-sello">
+              Conocer los criterios <ArrowRight size={15} aria-hidden />
+            </Link>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+export function CourseCard({ course }: { course: Course }) {
+  const Icon =
+    categoryIcons[course.category as keyof typeof categoryIcons] ?? BookOpen;
+  return (
+    <article className="course-card">
+      <div className={`course-category ${course.category}`}>
+        <span>{categoryName(course)}</span>
+        <Icon size={26} strokeWidth={1.5} aria-hidden />
+      </div>
+      <div className="card-body">
+        <Link
+          className="card-institution"
+          href={`/instituciones/${course.institution.slug}`}
+        >
+          <InstitutionLogo institution={course.institution} size={35} />
+          <span>{course.institution.name}</span>
+        </Link>
+        <h3>
+          <Link href={`/cursos/${course.slug}`}>{course.title}</Link>
+        </h3>
+        <p className="card-outcome">
+          {course.outcomes[0] ??
+            course.description ??
+            "Información formativa pendiente de completar."}
+        </p>
+        <div className="course-meta">
+          <span>
+            <Monitor size={15} aria-hidden />
+            {modeName(course.mode)}
+          </span>
+          <span>
+            <Clock3 size={15} aria-hidden />
+            {durationText(course)}
+          </span>
+          <span>{course.difficulty}</span>
+        </div>
+        <Credential institution={course.institution} />
+        <div className="card-bottom">
+          <div>
+            <small>{course.demo ? "Precio de ejemplo" : "Precio total"}</small>
+            <strong>
+              {money(course.price, course.currency)}
+              <small> {course.price !== null ? course.currency : ""}</small>
+            </strong>
+          </div>
+          <Link
+            href={`/cursos/${course.slug}`}
+            aria-label={`Ver curso: ${course.title}`}
+            className="card-arrow"
+          >
+            <ArrowRight size={21} />
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+}
+export function CourseGrid({ courses }: { courses: Course[] }) {
+  return (
+    <div className="course-grid">
+      {courses.map((c) => (
+        <CourseCard course={c} key={c.id} />
+      ))}
+    </div>
+  );
+}
+export function CategoryLinks({ categories }: { categories: Category[] }) {
+  return (
+    <div className="category-grid">
+      {categories.map((category) => {
+        const Icon =
+          categoryIcons[category.slug as keyof typeof categoryIcons] ??
+          BookOpen;
+        return (
+          <Link href={`/categorias/${category.slug}`} key={category.slug}>
+            <span className={`category-icon ${category.slug}`}>
+              <Icon size={25} strokeWidth={1.6} aria-hidden />
+            </span>
+            <strong>{category.name}</strong>
+            <ArrowRight size={16} aria-hidden />
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+export function InstitutionCard({ institution }: { institution: Institution }) {
+  return (
+    <article className="institution-card">
+      <InstitutionLogo institution={institution} size={68} />
+      <span className="eyebrow">{institution.specialty}</span>
+      <h2>
+        <Link href={`/instituciones/${institution.slug}`}>
+          {institution.name}
+        </Link>
+      </h2>
+      <p>
+        {institution.description ??
+          "Presentación institucional pendiente de completar."}
+      </p>
+      <span className="location">
+        <MapPin size={16} aria-hidden />
+        {institutionLocation(institution)}
+      </span>
+      <Credential institution={institution} />
+      <Link href={`/instituciones/${institution.slug}`} className="text-link">
+        Conocer la institución <ArrowRight size={17} aria-hidden />
+      </Link>
+    </article>
+  );
+}
+export function JsonLd({ data }: { data: unknown }) {
+  if (!config().indexable) return null;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
+    />
+  );
+}

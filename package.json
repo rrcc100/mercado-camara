@@ -1,0 +1,44 @@
+{
+  "name": "mercado-camara",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "next typegen && tsc --noEmit",
+    "lint": "eslint src tests next.config.ts",
+    "test": "vitest run",
+    "test:http": "node scripts/check-http.mjs",
+    "camara:import-config": "node scripts/camara/import-config.mjs",
+    "camara:check": "node scripts/camara/audit.mjs connection",
+    "camara:metadata": "node scripts/camara/audit.mjs metadata",
+    "camara:audit": "node scripts/camara/audit.mjs aggregate",
+    "camara:test": "node --test scripts/camara/read-only.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.19.0",
+  "dependencies": {
+    "@fontsource/open-sans": "5.3.0",
+    "lucide-react": "1.52.0",
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "0.0.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.8",
+    "mysql2": "3.24.5",
+    "prettier": "3.9.9",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11"
+  },
+  "type": "module"
+}

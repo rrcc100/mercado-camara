@@ -1,0 +1,16 @@
+.related-courses{margin-top:52px;padding-top:34px;border-top:1px solid var(--line);scroll-margin-top:24px}
+.related-courses .section-title{align-items:flex-end;flex-wrap:wrap}
+.related-courses .section-title h2{font-size:1.7rem;color:#283c70}
+.related-courses .section-title p{margin-top:10px;color:var(--muted);font-size:1rem}
+.related-courses .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.related-courses .related-hint{display:none}
+.related-courses .related-empty{padding:24px;background:white;border:1px solid var(--line);border-radius:12px;color:var(--muted)}
+.related-courses .related-empty p{margin-bottom:16px}
+@media(max-width:1050px) and (min-width:761px){.related-courses .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+ .related-courses{margin-top:38px;padding-top:28px}
+ .related-courses .section-title h2{font-size:1.5rem}
+ .related-courses .related-grid{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(88%,340px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:3px;overscroll-behavior-x:contain;padding:4px 3px 14px}
+ .related-courses .related-grid .product-card{scroll-snap-align:start;min-width:0}
+ .related-courses .related-hint{display:block;color:var(--muted);font-size:.875rem;margin-bottom:10px}
+}
