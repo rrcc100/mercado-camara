@@ -64,3 +64,13 @@ Los archivos de antecedentes no disponibles al cierre figuran en docs/camara/FUE
 - Handshake WebSocket de recarga confirmado para localhost y 127.0.0.1, con orígenes locales explícitos.
 - Imagen auxiliar camara-audit construida y sus 3 pruebas offline aprobadas dentro del contenedor. No se hicieron nuevas consultas a MySQL desde Docker en esta validación; su conectividad a la base dependerá de la red/origen autorizado.
 - Los servicios existentes del Observatorio se mantuvieron sin cambios. Ver [guía Docker](DOCKER.md).
+
+## Exploración marketplace desde localhost
+
+- `pnpm lint`, `pnpm typecheck` y build de producción correctos. Las 22 pruebas existentes siguen aprobadas.
+- 39 comprobaciones HTTP aprobadas contra el build final en `http://127.0.0.1:3020`: SSR, canonical, noindex, rutas, paginación, vacíos, 404 y recursos.
+- Navegador: búsqueda Excel online en CABA devuelve un curso; retirar CABA conserva búsqueda y modalidad y devuelve dos. Cambio tarjetas/lista conserva filtros. Orden por precio muestra $42.000 antes de $58.000, ambos ejemplos ficticios.
+- La página 2 conserva la vista de lista y muestra siete cursos; alternar a tarjetas mantiene página 2. Categoría Tecnología + Online mantiene la categoría al ordenar y quitar modalidad.
+- Portada, tarjetas/lista y ficha revisadas en escritorio y móvil de 390 × 844, sin desborde horizontal de página. Navegación y accesos rápidos permiten desplazamiento horizontal dentro de sus propias filas. Filtros móviles inicialmente cerrados y expandibles.
+- Ficha con precio/disponibilidad antes del programa en móvil; tres relacionados; consultas deshabilitadas. Imágenes del build final verificadas cargadas.
+- Capturas en `docs/qa/marketplace-*.jpg`. No hubo nueva consulta a la base ni nueva construcción Docker para este cambio visual; los comandos Docker y el contrato de datos se conservan.

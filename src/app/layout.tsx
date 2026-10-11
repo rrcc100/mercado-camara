@@ -4,6 +4,7 @@ import "@fontsource/open-sans/latin-600.css";
 import "@fontsource/open-sans/latin-700.css";
 import "@fontsource/open-sans/latin-800.css";
 import "./globals.css";
+import "./marketplace.css";
 import { Footer, Header } from "@/components/ui";
 import { config } from "@/lib/config";
 export const dynamic = "force-dynamic";
@@ -19,7 +20,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es-AR">
+    <html lang="es-AR" data-scroll-behavior="smooth">
       <body>
         <a className="skip-link" href="#contenido">
           Saltar al contenido

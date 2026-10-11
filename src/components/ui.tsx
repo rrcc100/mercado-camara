@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import {
   ArrowRight,
   Award,
@@ -12,8 +13,9 @@ import {
   MapPin,
   Megaphone,
   Monitor,
-  Search,
   Wrench,
+  Building2,
+  LayoutGrid,
 } from "lucide-react";
 import {
   type Category,
@@ -28,6 +30,7 @@ import {
   type Institution,
 } from "@/domain/catalog";
 import { config } from "@/lib/config";
+import { HeaderSearch, SearchForm } from "./header-search";
 
 export const categoryIcons = {
   tecnologia: Code2,
@@ -46,36 +49,8 @@ export function ChamberLogo({ small = false }: { small?: boolean }) {
       height={642}
       sizes={small ? "133px" : "188px"}
       alt="Cámara Argentina para la Formación Profesional y la Capacitación Laboral"
-      priority={!small}
+      loading={small ? "lazy" : "eager"}
     />
-  );
-}
-export function SearchForm({
-  value = "",
-  large = false,
-}: {
-  value?: string;
-  large?: boolean;
-}) {
-  return (
-    <form
-      className={`search-form ${large ? "large" : ""}`}
-      action="/cursos"
-      role="search"
-    >
-      <Search size={21} aria-hidden />
-      <input
-        type="search"
-        name="q"
-        aria-label="¿Qué querés aprender?"
-        placeholder="¿Qué querés aprender?"
-        defaultValue={value}
-        maxLength={160}
-      />
-      <button type="submit" className="button">
-        Buscar <ArrowRight size={17} aria-hidden />
-      </button>
-    </form>
   );
 }
 export function Header() {
@@ -102,17 +77,27 @@ export function Header() {
             </span>
           </Link>
           <div className="header-search">
-            <SearchForm />
+            <Suspense fallback={<SearchForm />}>
+              <HeaderSearch />
+            </Suspense>
           </div>
+          <Link href="/instituciones" className="header-institutions">
+            <Building2 size={23} strokeWidth={1.5} aria-hidden />
+            <span>
+              Conocé a las<strong>instituciones</strong>
+            </span>
+          </Link>
         </div>
         <nav className="container main-nav" aria-label="Navegación principal">
-          <Link href="/cursos">Explorar cursos</Link>
+          <Link href="/#categorias">
+            <LayoutGrid size={15} aria-hidden /> Categorías
+          </Link>
+          <Link href="/cursos">Todos los cursos</Link>
+          <Link href="/cursos?mode=ONLINE">Online</Link>
+          <Link href="/cursos?duration=short">Cursos cortos</Link>
           <Link href="/instituciones">Instituciones</Link>
           <Link href="/el-sello">El sello formativo</Link>
-          <span className="nav-note">
-            <BookOpen size={15} aria-hidden /> Tu próximo paso empieza
-            aprendiendo
-          </span>
+          <span className="nav-note">Formación para tu próximo paso</span>
         </nav>
       </header>
     </>
@@ -286,23 +271,58 @@ export function Credential({
 export function CourseCard({ course }: { course: Course }) {
   const Icon =
     categoryIcons[course.category as keyof typeof categoryIcons] ?? BookOpen;
+  // Tiles from the existing demo illustration, never a fallback for real media.
+  const demoTile = course.demo
+    ? Object.keys(categoryIcons).indexOf(course.category ?? "")
+    : -1;
   return (
     <article className="course-card">
-      <div className={`course-category ${course.category}`}>
-        <span>{categoryName(course)}</span>
-        <Icon size={26} strokeWidth={1.5} aria-hidden />
-      </div>
+      <Link
+        href={`/cursos/${course.slug}`}
+        className={`card-media ${course.category ?? ""}`}
+        aria-label={`Ver curso: ${course.title}`}
+        tabIndex={-1}
+      >
+        {demoTile >= 0 ? (
+          <svg
+            className="card-demo-art"
+            viewBox={`${(demoTile % 3) * (1400 / 3)} ${Math.floor(demoTile / 3) * (933 / 2)} ${1400 / 3} ${933 / 2}`}
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            aria-label={`Imagen ilustrativa de ${categoryName(course)}`}
+          >
+            <image
+              href="/assets/course-category-atlas.webp"
+              width="1400"
+              height="933"
+            />
+          </svg>
+        ) : course.cover ? (
+          <Image
+            src={course.cover}
+            alt={course.coverAlt ?? ""}
+            fill
+            sizes="(max-width: 760px) 50vw, 280px"
+          />
+        ) : (
+          <Icon size={48} strokeWidth={1.2} aria-hidden />
+        )}
+        {(course.cover || demoTile >= 0) && course.demo && (
+          <span className="card-image-note">Imagen ilustrativa</span>
+        )}
+      </Link>
       <div className="card-body">
+        <span className="card-category-label">{categoryName(course)}</span>
+        <h3>
+          <Link href={`/cursos/${course.slug}`}>{course.title}</Link>
+        </h3>
         <Link
           className="card-institution"
           href={`/instituciones/${course.institution.slug}`}
         >
-          <InstitutionLogo institution={course.institution} size={35} />
+          <InstitutionLogo institution={course.institution} size={26} />
           <span>{course.institution.name}</span>
         </Link>
-        <h3>
-          <Link href={`/cursos/${course.slug}`}>{course.title}</Link>
-        </h3>
         <p className="card-outcome">
           {course.outcomes[0] ??
             course.description ??
@@ -317,32 +337,41 @@ export function CourseCard({ course }: { course: Course }) {
             <Clock3 size={15} aria-hidden />
             {durationText(course)}
           </span>
-          <span>{course.difficulty}</span>
+          {course.difficulty && <span>{course.difficulty}</span>}
         </div>
         <Credential institution={course.institution} />
-        <div className="card-bottom">
-          <div>
-            <small>{course.demo ? "Precio de ejemplo" : "Precio total"}</small>
-            <strong>
-              {money(course.price, course.currency)}
-              <small> {course.price !== null ? course.currency : ""}</small>
-            </strong>
-          </div>
-          <Link
-            href={`/cursos/${course.slug}`}
-            aria-label={`Ver curso: ${course.title}`}
-            className="card-arrow"
-          >
-            <ArrowRight size={21} />
-          </Link>
+      </div>
+      <div className="card-bottom">
+        <div>
+          <small>{course.demo ? "Precio de ejemplo" : "Precio total"}</small>
+          <strong>
+            {money(course.price, course.currency)}
+            <small> {course.price !== null ? course.currency : ""}</small>
+          </strong>
         </div>
+        <Link
+          href={`/cursos/${course.slug}`}
+          aria-label={`Ver curso: ${course.title}`}
+          className="card-arrow"
+        >
+          <span>Ver curso</span>
+          <ArrowRight size={17} aria-hidden />
+        </Link>
       </div>
     </article>
   );
 }
-export function CourseGrid({ courses }: { courses: Course[] }) {
+export function CourseGrid({
+  courses,
+  view = "grid",
+}: {
+  courses: Course[];
+  view?: "grid" | "list";
+}) {
   return (
-    <div className="course-grid">
+    <div
+      className={view === "list" ? "course-grid course-list" : "course-grid"}
+    >
       {courses.map((c) => (
         <CourseCard course={c} key={c.id} />
       ))}

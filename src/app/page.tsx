@@ -1,132 +1,158 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  BadgeCheck,
-  BookOpen,
-  Compass,
-  GraduationCap,
-} from "lucide-react";
-import { CategoryLinks, CourseGrid, SearchForm } from "@/components/ui";
+import { ArrowRight, Clock3, Monitor, Building2 } from "lucide-react";
+import { CategoryLinks, CourseGrid } from "@/components/ui";
 import { getRepository } from "@/data/repository";
 import { pageMetadata } from "@/lib/seo";
+
 export const metadata = pageMetadata(
-  "Aprendé algo que te lleve más lejos",
-  "Explorá cursos de tecnología, administración, oficios y más. Encontrá habilidades para tu próximo paso con Forma, el portal de la Cámara.",
+  "Encontrá tu próximo curso",
+  "Explorá cursos por tema, modalidad e institución. Encontrá una propuesta para tu próximo paso con Forma, el portal de la Cámara.",
   "/",
 );
+
 export default async function Home() {
   const repo = await getRepository();
-  const { items, categories } = await repo.catalog();
+  const [{ items, categories }, online] = await Promise.all([
+    repo.catalog(),
+    repo.catalog({ mode: "ONLINE" }),
+  ]);
   return (
-    <>
-      <section className="container hero">
-        <div className="hero-copy">
-          <span className="eyebrow">
-            <span className="tiny-line" /> FORMACIÓN QUE TE CONECTA CON EL
-            FUTURO
-          </span>
-          <h1>
-            Tu próximo paso
-            <br />
-            empieza <em>aprendiendo.</em>
-          </h1>
-          <p>
-            Encontrá el curso que va con vos. Desarrollá habilidades prácticas y
-            abrí nuevas posibilidades para tu trabajo.
-          </p>
-          <SearchForm large />
-          <div className="popular">
-            <span>Para inspirarte:</span>
-            <Link href="/cursos?q=Excel">Excel</Link>
-            <Link href="/cursos?q=Marketing">Marketing digital</Link>
-            <Link href="/cursos?q=oficios">Oficios</Link>
+    <div className="market-home">
+      <section className="market-hero">
+        <div className="container market-hero-inner">
+          <div className="market-hero-copy">
+            <span className="eyebrow">EL PORTAL DE CURSOS DE LA CÁMARA</span>
+            <h1>
+              Lo que querés aprender.
+              <br />
+              <em>Tu próximo paso.</em>
+            </h1>
+            <p>
+              Explorá propuestas, conocé a las instituciones y encontrá el curso
+              que va con vos.
+            </p>
+            <Link href="/cursos" className="button">
+              Explorar cursos <ArrowRight size={18} aria-hidden />
+            </Link>
           </div>
-        </div>
-        <div className="hero-visual">
-          <Image
-            src="/assets/digital-learning.webp"
-            alt="Ilustración de personas aprendiendo herramientas digitales"
-            fill
-            sizes="(max-width: 760px) 100vw, 46vw"
-            priority
-          />
-          <span className="image-note">Imagen ilustrativa</span>
-          <div className="hero-caption">
-            <span>
-              <GraduationCap size={24} aria-hidden />
-            </span>
-            <div>
-              <strong>Aprender para hacer.</strong>
-              <small>Habilidades que se llevan a la práctica.</small>
-            </div>
+          <div className="market-hero-image">
+            <Image
+              src="/assets/digital-learning.webp"
+              alt="Ilustración de personas aprendiendo herramientas digitales"
+              fill
+              sizes="(max-width: 760px) 40vw, 42vw"
+              loading="eager"
+            />
+            <span>Imagen ilustrativa</span>
           </div>
         </div>
       </section>
-      <div className="container trust-strip">
-        <span>
-          <Compass aria-hidden size={23} />
-          <span>
-            <strong>Encontrá tu camino</strong>
-            <small>Cursos por tema, modalidad y ubicación</small>
-          </span>
-        </span>
-        <span>
-          <BookOpen aria-hidden size={23} />
-          <span>
-            <strong>Sabé qué vas a aprender</strong>
-            <small>Objetivos y resultados claros</small>
-          </span>
-        </span>
-        <span>
-          <BadgeCheck aria-hidden size={23} />
-          <span>
-            <strong>Conocé quién te forma</strong>
-            <small>Información y sello institucional</small>
-          </span>
-        </span>
+
+      <div className="container quick-access" aria-label="Accesos al catálogo">
+        {[
+          {
+            icon: Monitor,
+            title: "Aprendé online",
+            description: "Explorá propuestas a distancia",
+            href: "/cursos?mode=ONLINE",
+          },
+          {
+            icon: Clock3,
+            title: "Cursos de hasta 40 horas",
+            description: "Encontrá una formación corta",
+            href: "/cursos?duration=short",
+          },
+          {
+            icon: Building2,
+            title: "Conocé quién te forma",
+            description: "Visitá los perfiles institucionales",
+            href: "/instituciones",
+          },
+        ].map(({ icon: Icon, title, description, href }) => (
+          <Link href={href} key={href}>
+            <span className="quick-icon">
+              <Icon size={25} strokeWidth={1.6} aria-hidden />
+            </span>
+            <span>
+              <strong>{title}</strong>
+              <small>{description}</small>
+            </span>
+            <ArrowRight size={18} aria-hidden />
+          </Link>
+        ))}
       </div>
-      <section className="container section">
+
+      <section
+        className="container market-section category-section"
+        id="categorias"
+      >
         <div className="section-heading">
-          <div>
-            <span className="eyebrow">UN MUNDO DE POSIBILIDADES</span>
-            <h2>¿Por dónde querés empezar?</h2>
-          </div>
-          <Link href="/cursos" className="text-link">
-            Ver todos los cursos <ArrowRight size={18} aria-hidden />
+          <h2>¿Qué te gustaría aprender?</h2>
+          <Link className="text-link" href="/cursos">
+            Ver todos los cursos <ArrowRight size={16} aria-hidden />
           </Link>
         </div>
         <CategoryLinks categories={categories} />
       </section>
-      <section className="container section">
+
+      <section className="container market-section">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">HABILIDADES PARA TU DÍA A DÍA</span>
-            <h2>Descubrí tu próxima oportunidad</h2>
-            <p>Explorá propuestas y elegí qué querés aprender.</p>
+            <h2>Cursos para dar el próximo paso</h2>
+            <p>Distintas propuestas, toda la información para elegir.</p>
           </div>
-          <Link href="/cursos" className="text-link">
-            Explorar catálogo <ArrowRight size={18} aria-hidden />
+          <Link className="text-link" href="/cursos">
+            Ver catálogo <ArrowRight size={16} aria-hidden />
           </Link>
         </div>
-        <CourseGrid courses={items.slice(0, 3)} />
+        {items.length ? (
+          <CourseGrid courses={items.slice(0, 4)} />
+        ) : (
+          <p className="subtle-box">Todavía no hay cursos publicados.</p>
+        )}
       </section>
-      <section className="container chamber-banner">
-        <div className="banner-symbol">
-          <GraduationCap size={58} strokeWidth={1.3} aria-hidden />
-        </div>
+
+      <section className="container discovery-banner">
         <div>
-          <span className="eyebrow">CON INFORMACIÓN PARA ELEGIR</span>
-          <h2>Detrás de cada curso, una institución.</h2>
+          <span className="eyebrow">ELEGÍ CON MÁS INFORMACIÓN</span>
+          <h2>
+            El curso importa.
+            <br />
+            Quién te forma, también.
+          </h2>
           <p>
-            Conocé su propuesta, sus especialidades y el significado del Sello
-            de Desarrollo Formativo de la Cámara.
+            Conocé las instituciones, su propuesta y el significado del sello
+            formativo.
           </p>
+          <Link href="/instituciones" className="text-link">
+            Explorar instituciones <ArrowRight size={18} aria-hidden />
+          </Link>
         </div>
-        <Link className="button light" href="/instituciones">
-          Conocer instituciones <ArrowRight size={17} aria-hidden />
+        <Link href="/el-sello" className="discovery-seal">
+          <Building2 size={40} strokeWidth={1.2} aria-hidden />
+          <strong>Sello de Desarrollo Formativo</strong>
+          <span>
+            Conocé la propuesta y sus criterios{" "}
+            <ArrowRight size={16} aria-hidden />
+          </span>
         </Link>
       </section>
-    </>
+
+      {online.items.length > 0 && (
+        <section className="container market-section">
+          <div className="section-heading">
+            <div>
+              <h2>Explorá cursos online</h2>
+              <p>Formación a distancia, en un solo lugar.</p>
+            </div>
+            <Link className="text-link" href="/cursos?mode=ONLINE">
+              Ver cursos online <ArrowRight size={16} aria-hidden />
+            </Link>
+          </div>
+          <CourseGrid courses={online.items.slice(0, 4)} />
+        </section>
+      )}
+    </div>
   );
 }

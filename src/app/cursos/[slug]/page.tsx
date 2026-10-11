@@ -160,7 +160,7 @@ export default async function CoursePage({ params }: Props) {
                 width={1400}
                 height={933}
                 sizes="(max-width: 760px) 100vw, 65vw"
-                priority
+                loading="eager"
               />
               <figcaption>
                 Imagen ilustrativa
@@ -168,6 +168,63 @@ export default async function CoursePage({ params }: Props) {
               </figcaption>
             </figure>
           )}
+        </div>
+        <aside className="course-sidebar">
+          <div className="enrollment-card">
+            <span className="eyebrow">INVERTÍ EN TU PRÓXIMO PASO</span>
+            <small>
+              {course.demo
+                ? "Precio total de ejemplo"
+                : "Precio total informado"}
+            </small>
+            <div className="detail-price">
+              {money(course.price, course.currency)}{" "}
+              <span>{course.price !== null ? course.currency : ""}</span>
+            </div>
+            <p>
+              {durationText(course)} · {modeName(course.mode)}
+            </p>
+            <hr />
+            <div className="availability-note">
+              <strong>
+                {course.demo
+                  ? "Estás explorando una demostración"
+                  : "Consultas aún no habilitadas"}
+              </strong>
+              <p>
+                {course.demo
+                  ? "Los precios y las condiciones son ficticios. No se reciben inscripciones ni consultas en esta versión."
+                  : "El canal de consulta se habilitará al completar la integración con la institución."}
+              </p>
+            </div>
+            <button className="button disabled" disabled>
+              Consulta no disponible
+            </button>
+            <small>
+              Fechas, horarios, cupos y condiciones de pago: pendientes de
+              información de la institución.
+            </small>
+            <span className="certificate-small">
+              <GraduationCap size={20} aria-hidden />
+              {course.certificate?.label ??
+                "Certificación pendiente de confirmar"}
+              {course.demo ? " · ejemplo" : ""}
+            </span>
+          </div>
+          <Credential institution={institution} full />
+          <Link
+            href={`/instituciones/${institution.slug}`}
+            className="provider-link"
+          >
+            <InstitutionLogo institution={institution} />
+            <span>
+              <small>Conocé quién te forma</small>
+              <strong>{institution.name}</strong>
+            </span>
+            <ArrowRight size={18} aria-hidden />
+          </Link>
+        </aside>
+        <div className="course-content">
           <nav className="course-tabs" aria-label="Secciones del curso">
             <a href="#resultados">Qué vas a aprender</a>
             <a href="#objetivos">Objetivos</a>
@@ -286,61 +343,6 @@ export default async function CoursePage({ params }: Props) {
             <p>Aún no hay opiniones verificadas publicadas para este curso.</p>
           </section>
         </div>
-        <aside className="course-sidebar">
-          <div className="enrollment-card">
-            <span className="eyebrow">INVERTÍ EN TU PRÓXIMO PASO</span>
-            <small>
-              {course.demo
-                ? "Precio total de ejemplo"
-                : "Precio total informado"}
-            </small>
-            <div className="detail-price">
-              {money(course.price, course.currency)}{" "}
-              <span>{course.price !== null ? course.currency : ""}</span>
-            </div>
-            <p>
-              {durationText(course)} · {modeName(course.mode)}
-            </p>
-            <hr />
-            <div className="availability-note">
-              <strong>
-                {course.demo
-                  ? "Estás explorando una demostración"
-                  : "Consultas aún no habilitadas"}
-              </strong>
-              <p>
-                {course.demo
-                  ? "Los precios y las condiciones son ficticios. No se reciben inscripciones ni consultas en esta versión."
-                  : "El canal de consulta se habilitará al completar la integración con la institución."}
-              </p>
-            </div>
-            <button className="button disabled" disabled>
-              Consulta no disponible
-            </button>
-            <small>
-              Fechas, horarios, cupos y condiciones de pago: pendientes de
-              información de la institución.
-            </small>
-            <span className="certificate-small">
-              <GraduationCap size={20} aria-hidden />
-              {course.certificate?.label ??
-                "Certificación pendiente de confirmar"}
-              {course.demo ? " · ejemplo" : ""}
-            </span>
-          </div>
-          <Credential institution={institution} full />
-          <Link
-            href={`/instituciones/${institution.slug}`}
-            className="provider-link"
-          >
-            <InstitutionLogo institution={institution} />
-            <span>
-              <small>Conocé quién te forma</small>
-              <strong>{institution.name}</strong>
-            </span>
-            <ArrowRight size={18} aria-hidden />
-          </Link>
-        </aside>
       </div>
       <section className="section related-section">
         <div className="section-heading">

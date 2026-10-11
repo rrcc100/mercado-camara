@@ -111,3 +111,7 @@ El contrato v0.2 distingue curso/versiones, categorías dinámicas, módulos est
 ## Ejecución con Docker
 
 Se incorporaron Dockerfile, compose.yaml, compose.dev.yaml y una lista permitida en .dockerignore. `docker compose up -d --build --wait` sirve la demo en localhost:3010. El frontend no monta secretos ni depende del Observatorio. Existe un servicio opcional de auditoría CLI en el perfil tools, con el secreto local montado en lectura. El modo de desarrollo usa recarga de código desde Windows; ver [operación Docker](DOCKER.md). No se implementaron servicios C# o MySQL nuevos ni cambió el stack acordado.
+
+## Exploración visual desde localhost
+
+Por pedido del usuario se creó `explore/marketplace-frontend` desde `localhost` (`c8bc4ec`) para acercar la experiencia a Mercado Libre, conservando los colores e identidad de Cámara. Incluye una primera propuesta de portada, búsqueda, catálogo en tarjetas/lista y ficha. Ver [alcance y recorridos de revisión](EXPLORACION-MARKETPLACE.md). Las decisiones de dominio, integración, publicación y demostración documentadas arriba siguen vigentes.
