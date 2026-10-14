@@ -6,12 +6,33 @@ import {
 } from "@/domain/catalog";
 import { relatedCourses, searchCourses } from "@/domain/search";
 import fixtures from "./fixtures.json";
+import { demoRating } from "./ratings";
 export const institutions = institutionSchema
   .array()
   .parse(fixtures.institutions);
-export const courses = courseSchema.array().parse(fixtures.courses);
+export const courses = courseSchema.array().parse(
+  fixtures.courses.map((course, index) => ({
+    ...course,
+    rating: demoRating(course.id, index),
+  })),
+);
 const categories = demoCategories.map((c) => ({ ...c, id: `demo-${c.slug}` }));
 export const demoRepository: CatalogRepository = {
+  async searchSuggestions() {
+    return [
+      ...categories.map((c) => ({ label: c.name, kind: "CATEGORY" as const })),
+      ...courses
+        .filter((c) => c.status === "PUBLISHED")
+        .map((c) => ({ label: c.title, kind: "COURSE" as const })),
+      ...institutions
+        .filter((i) =>
+          courses.some(
+            (c) => c.status === "PUBLISHED" && c.institution.id === i.id,
+          ),
+        )
+        .map((i) => ({ label: i.name, kind: "INSTITUTION" as const })),
+    ].slice(0, 60);
+  },
   async categories() {
     return categories;
   },

@@ -61,4 +61,27 @@ describe("transporte GraphQL", () => {
       graphqlRequest(endpoint, query, {}, z.object({})),
     ).rejects.toThrow("Sin conexión");
   });
+  it("rechaza valoraciones ficticias anidadas en una respuesta real", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue(
+        Response.json({
+          data: { course: { demo: false, rating: { demo: true } } },
+        }),
+      ),
+    );
+    await expect(
+      graphqlRequest(
+        endpoint,
+        query,
+        {},
+        z.object({
+          course: z.object({
+            demo: z.boolean(),
+            rating: z.object({ demo: z.boolean() }),
+          }),
+        }),
+      ),
+    ).rejects.toThrow("contenido de demostración");
+  });
 });

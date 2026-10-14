@@ -31,7 +31,7 @@ export default async function Courses({ searchParams }: Props) {
       <Catalog
         key={JSON.stringify(params)}
         filters={filters}
-        view={params.view === "list" ? "list" : "grid"}
+        view={params.view === "grid" ? "grid" : "list"}
       />
     </div>
   );

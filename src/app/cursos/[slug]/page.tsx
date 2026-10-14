@@ -20,6 +20,7 @@ import {
   JsonLd,
 } from "@/components/ui";
 import { CourseVideo } from "@/components/video";
+import { CourseRatingSummary, CourseReviews } from "@/components/course-rating";
 import { categoryName, modeName, durationText, money } from "@/domain/catalog";
 import { getCourse, getRepository } from "@/data/repository";
 import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
@@ -120,6 +121,7 @@ export default async function CoursePage({ params }: Props) {
               </span>
             </div>
             <h1>{course.title}</h1>
+            <CourseRatingSummary rating={course.rating} href="#opiniones" />
             <p className="lead">
               {course.description ?? "Descripción pendiente de completar."}
             </p>
@@ -150,6 +152,16 @@ export default async function CoursePage({ params }: Props) {
                     ? "Cursada online"
                     : "Lugar de cursada por confirmar")}
               </span>
+            </div>
+            <div className="course-learning-preview">
+              <strong>Qué vas a aprender</strong>
+              <p>
+                {course.outcomes[0] ??
+                  "Resultados de aprendizaje pendientes de completar."}
+              </p>
+              <a href="#resultados">
+                Ver todos los resultados <ArrowRight size={14} aria-hidden />
+              </a>
             </div>
           </header>
           {course.cover && (
@@ -211,7 +223,7 @@ export default async function CoursePage({ params }: Props) {
               {course.demo ? " · ejemplo" : ""}
             </span>
           </div>
-          <Credential institution={institution} full />
+          <Credential institution={institution} />
           <Link
             href={`/instituciones/${institution.slug}`}
             className="provider-link"
@@ -231,6 +243,7 @@ export default async function CoursePage({ params }: Props) {
             <a href="#destinatarios">Dirigido a</a>
             <a href="#programa">Programa</a>
             <a href="#certificado">Certificado</a>
+            <a href="#opiniones">Valoraciones</a>
           </nav>
           <section className="detail-section" id="resultados">
             <span className="eyebrow">
@@ -339,9 +352,8 @@ export default async function CoursePage({ params }: Props) {
                 No hay un video público disponible para este curso.
               </p>
             )}
-            <h3>Opiniones de estudiantes</h3>
-            <p>Aún no hay opiniones verificadas publicadas para este curso.</p>
           </section>
+          <CourseReviews rating={course.rating} />
         </div>
       </div>
       <section className="section related-section">

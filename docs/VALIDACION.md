@@ -74,3 +74,14 @@ Los archivos de antecedentes no disponibles al cierre figuran en docs/camara/FUE
 - Portada, tarjetas/lista y ficha revisadas en escritorio y móvil de 390 × 844, sin desborde horizontal de página. Navegación y accesos rápidos permiten desplazamiento horizontal dentro de sus propias filas. Filtros móviles inicialmente cerrados y expandibles.
 - Ficha con precio/disponibilidad antes del programa en móvil; tres relacionados; consultas deshabilitadas. Imágenes del build final verificadas cargadas.
 - Capturas en `docs/qa/marketplace-*.jpg`. No hubo nueva consulta a la base ni nueva construcción Docker para este cambio visual; los comandos Docker y el contrato de datos se conservan.
+
+## Valoraciones y mejoras de navegación (11/10/2026)
+
+- 28 pruebas aprobadas: consistencia de promedio/distribución/comentarios, rango 1–5, ausencia de valoraciones, separación demo/real y rechazo de valoraciones demo anidadas en GraphQL, además de las pruebas anteriores.
+- TypeScript, ESLint y compilación de producción correctos. 39 verificaciones HTTP aprobadas en `http://127.0.0.1:3020`.
+- Escritorio: sugerencia “Excel para el trabajo” elegida con flecha abajo y Enter devuelve un curso. Lista inicial confirmada y cambio a tarjetas conserva la búsqueda. Promedio de la ficha enlaza a distribución y cinco opiniones de ejemplo.
+- Móvil 390 × 844: filtros inicialmente cerrados, barra de filtros y orden fija al desplazarse. Excel + Online mantiene dos filtros activos al ordenar por precio y presenta primero Excel y gestión administrativa.
+- Perfil Horizonte: buscar Excel devuelve sólo Excel para el trabajo; sumar Administración produce un vacío explícito y “Ver toda su oferta” recupera los tres cursos propios.
+- Ficha y opiniones revisadas en ambos tamaños, sin desborde horizontal en los recorridos comprobados. Las estrellas no tienen marcas de verificación y el curso sin opiniones conserva su estado vacío.
+- Evidencias en `docs/qa/valoraciones-*.jpg`. Sin nueva auditoría MySQL, sin cambios en el Observatorio y sin reconstruir Docker. Para ver los cambios en contenedor se requiere el comando de reconstrucción documentado.
+- Iteración desarrollada sobre `3edf22d`. El 14/10/2026 el usuario autorizó el commit y reservó el push para hacerlo personalmente.

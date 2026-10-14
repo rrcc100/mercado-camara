@@ -45,7 +45,7 @@ export default async function Category({ params, searchParams }: Props) {
       <Catalog
         key={JSON.stringify(query)}
         filters={filters}
-        view={query.view === "list" ? "list" : "grid"}
+        view={query.view === "grid" ? "grid" : "list"}
         fixedCategory={slug}
         basePath={`/categorias/${slug}`}
       />

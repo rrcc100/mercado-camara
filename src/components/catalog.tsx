@@ -40,7 +40,7 @@ export async function Catalog({
   filters,
   basePath = "/cursos",
   fixedCategory,
-  view = "grid",
+  view = "list",
 }: {
   filters: SearchFilters;
   basePath?: string;
@@ -54,7 +54,7 @@ export async function Catalog({
     for (const [key, value] of Object.entries({ ...filters, ...changes }))
       if (value && !(key === "category" && fixedCategory))
         params.set(key, String(value));
-    if (nextView === "list") params.set("view", "list");
+    params.set("view", nextView);
     return `${basePath}?${params}`;
   }
   const applied = [
@@ -202,7 +202,7 @@ export async function Catalog({
             de {result.total}
           </span>
         </div>
-        <div className="catalog-toolbar">
+        <div className="catalog-toolbar" id="ordenar-resultados">
           <form action={basePath} className="catalog-sort">
             {Object.entries(filters)
               .filter(

@@ -83,19 +83,6 @@ export default async function Home() {
         ))}
       </div>
 
-      <section
-        className="container market-section category-section"
-        id="categorias"
-      >
-        <div className="section-heading">
-          <h2>¿Qué te gustaría aprender?</h2>
-          <Link className="text-link" href="/cursos">
-            Ver todos los cursos <ArrowRight size={16} aria-hidden />
-          </Link>
-        </div>
-        <CategoryLinks categories={categories} />
-      </section>
-
       <section className="container market-section">
         <div className="section-heading">
           <div>
@@ -111,6 +98,19 @@ export default async function Home() {
         ) : (
           <p className="subtle-box">Todavía no hay cursos publicados.</p>
         )}
+      </section>
+
+      <section
+        className="container market-section category-section"
+        id="categorias"
+      >
+        <div className="section-heading">
+          <h2>Explorá por área de formación</h2>
+          <Link className="text-link" href="/cursos">
+            Ver todos los cursos <ArrowRight size={16} aria-hidden />
+          </Link>
+        </div>
+        <CategoryLinks categories={categories} />
       </section>
 
       <section className="container discovery-banner">

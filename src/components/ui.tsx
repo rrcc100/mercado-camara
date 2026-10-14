@@ -28,9 +28,11 @@ import {
   stageNames,
   type Course,
   type Institution,
+  type SearchSuggestion,
 } from "@/domain/catalog";
 import { config } from "@/lib/config";
 import { HeaderSearch, SearchForm } from "./header-search";
+import { CourseRatingSummary } from "./course-rating";
 
 export const categoryIcons = {
   tecnologia: Code2,
@@ -53,7 +55,11 @@ export function ChamberLogo({ small = false }: { small?: boolean }) {
     />
   );
 }
-export function Header() {
+export function Header({
+  suggestions = [],
+}: {
+  suggestions?: SearchSuggestion[];
+}) {
   return (
     <>
       <div className="demo-bar">
@@ -61,7 +67,7 @@ export function Header() {
           <>
             <span className="status-dot" /> Versión de demostración{" "}
             <span className="demo-extra">
-              · Cursos, instituciones y precios ficticios
+              · Cursos, instituciones, precios y valoraciones ficticios
             </span>
           </>
         ) : (
@@ -78,7 +84,7 @@ export function Header() {
           </Link>
           <div className="header-search">
             <Suspense fallback={<SearchForm />}>
-              <HeaderSearch />
+              <HeaderSearch suggestions={suggestions} />
             </Suspense>
           </div>
           <Link href="/instituciones" className="header-institutions">
@@ -328,6 +334,10 @@ export function CourseCard({ course }: { course: Course }) {
             course.description ??
             "Información formativa pendiente de completar."}
         </p>
+        <CourseRatingSummary
+          rating={course.rating}
+          href={`/cursos/${course.slug}#opiniones`}
+        />
         <div className="course-meta">
           <span>
             <Monitor size={15} aria-hidden />
@@ -339,7 +349,15 @@ export function CourseCard({ course }: { course: Course }) {
           </span>
           {course.difficulty && <span>{course.difficulty}</span>}
         </div>
-        <Credential institution={course.institution} />
+        <Link
+          className="card-seal"
+          href={`/instituciones/${course.institution.slug}`}
+        >
+          <Award size={14} aria-hidden />
+          {course.institution.assessment
+            ? `Sello institucional: ${levelNames[course.institution.assessment.level]}${course.institution.demo ? " · ejemplo" : ""}`
+            : "Sin evaluación institucional publicada"}
+        </Link>
       </div>
       <div className="card-bottom">
         <div>
