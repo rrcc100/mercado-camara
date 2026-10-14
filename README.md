@@ -69,7 +69,7 @@ No se importan scripts del prototipo en la aplicación. `scripts/migrate-referen
 
 ## Estado y límites
 
-Los 16 cursos, 6 instituciones, precios, logos de socios y niveles son ejemplos. No hay valoraciones verificadas, login, pagos, matriculación, edición de socios ni envío de leads. Las consultas están deshabilitadas de forma explícita. El video público de LearnFree es un ejemplo ajeno a las instituciones; sólo carga con una acción del visitante.
+Los 16 cursos, 6 instituciones, precios, logos de socios y niveles son ejemplos. Las estrellas y opiniones ficticias están identificadas como ejemplos y separadas del sello institucional; un curso muestra el estado sin valoraciones. No hay valoraciones verificadas, login, pagos, matriculación, edición de socios ni envío de leads. Las consultas están deshabilitadas de forma explícita. El video público de LearnFree es un ejemplo ajeno a las instituciones; sólo carga con una acción del visitante.
 
 Los sellos son datos tipados de cada institución, no un cálculo del frontend. Las etapas y niveles ilustrativos no constituyen aprobación de una política de evaluación. La búsqueda no usa niveles como ponderación; se retiró el orden por puntuación institucional porque las etapas no son comparables. Se puede filtrar por nivel, y ordenar por relevancia, precio o duración.
 

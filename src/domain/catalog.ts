@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { ratingSchema } from "./ratings";
 
 // Taxonomy of the fictitious catalog only. Real categories come from GraphQL.
 export const demoCategories = [
@@ -171,11 +172,16 @@ export const courseSchema = z
       })
       .nullable(),
     updatedAt: z.string().nullable(),
+    rating: ratingSchema.nullable().default(null),
     demo: z.boolean(),
   })
   .refine(
     (c) => c.price === null || c.currency !== null,
     "Un precio requiere moneda confirmada",
+  )
+  .refine(
+    (c) => c.rating === null || c.rating.demo === c.demo,
+    "Las valoraciones de ejemplo sólo pueden pertenecer a cursos de ejemplo",
   );
 export type Institution = z.infer<typeof institutionSchema>;
 export type Course = z.infer<typeof courseSchema>;
@@ -206,6 +212,7 @@ export const catalogResultSchema = z
   );
 export type CatalogResult = z.infer<typeof catalogResultSchema>;
 export interface CatalogRepository {
+  searchSuggestions(): Promise<SearchSuggestion[]>;
   categories(): Promise<Category[]>;
   catalog(filters?: SearchFilters): Promise<CatalogResult>;
   course(slug: string): Promise<Course | null>;
@@ -215,6 +222,11 @@ export interface CatalogRepository {
   related(course: Course): Promise<Course[]>;
   publishedSlugs(): Promise<{ courses: string[]; institutions: string[] }>;
 }
+export const searchSuggestionSchema = z.object({
+  label: z.string().min(1).max(160),
+  kind: z.enum(["COURSE", "CATEGORY", "INSTITUTION"]),
+});
+export type SearchSuggestion = z.infer<typeof searchSuggestionSchema>;
 export const categoryName = (course: Pick<Course, "categoryLabel">) =>
   course.categoryLabel ?? "Categoría por confirmar";
 export const modeName = (mode: Course["mode"]) =>

@@ -1,4 +1,4 @@
-# Integración del backend · borrador v0.2 · contrastado con auditoría del 07/10/2026
+# Integración del backend · borrador v0.3 · base contrastada con auditoría del 07/10/2026
 
 ## Responsabilidades y fuente de verdad
 
@@ -12,7 +12,7 @@ Al 7/10/2026, .NET 9 está en mantenimiento y su soporte termina el **10/11/2026
 
 ## Contrato ejecutable del frontend
 
-`docs/contrato.graphql` es SDL propuesto, no el esquema de una API existente. Las ocho consultas públicas de `src/data/graphql/repository.ts` coinciden con él. `src/domain/catalog.ts` valida su respuesta en ejecución y aporta los tipos TypeScript. Regenerar tipos desde el esquema aprobado cuando exista; hasta entonces los validadores y el SDL deben cambiar juntos.
+`docs/contrato.graphql` es SDL propuesto, no el esquema de una API existente. Las nueve consultas públicas de `src/data/graphql/repository.ts` coinciden con él. `src/domain/catalog.ts` valida su respuesta en ejecución y aporta los tipos TypeScript. Regenerar tipos desde el esquema aprobado cuando exista; hasta entonces los validadores y el SDL deben cambiar juntos.
 
 Ejemplo de consulta con variables:
 
@@ -70,6 +70,14 @@ Medios: por ahora sólo assets locales controlados del frontend y videos YouTube
 Los arrays de instituciones, cursos por institución y slugs son límites de esta primera versión. Para catálogos grandes: conexiones por cursor, paginación de sitemap y límites de complejidad, cambiando las operaciones de consumo coordinadamente. No descargar toda la base al navegador ni hacer filtros productivos sobre fixtures.
 
 ## Configuración y fallas
+
+### Extensión v0.3: valoraciones y sugerencias (11/10/2026)
+
+`Course.rating` es nullable. La auditoría no confirmó una fuente de opiniones publicables: este campo requiere datos nuevos, no una transformación de certificados o notas de aprobación. Sin opiniones públicas se devuelve `null`, nunca promedio cero. El backend calculará promedio (1–5, un decimal), cantidad y cinco grupos de distribución sobre el mismo conjunto autorizado. Los comentarios son una muestra de hasta cinco, con alias público y sin IDs de alumnos, documentos ni contactos. No se exponen marcas de alumno verificado. Acordar elegibilidad, moderación, consentimiento, evidencia, duplicados, orden de comentarios y si las opiniones corresponden al curso o a una versión antes de conectarlo a producción.
+
+La demo genera cinco opiniones ficticias por curso valorado en `src/data/demo/ratings.ts`, y conserva un curso sin opiniones. Todos los promedios se calculan a partir de esos ejemplos. El dominio exige que `rating.demo` coincida con `course.demo`; el transporte GraphQL rechaza cualquier `demo: true`, incluso anidado. Las estrellas no modifican la relevancia, los relacionados ni el sello institucional. No se agregan reseñas a JSON-LD ni se habilita una mutación de opiniones.
+
+`searchSuggestions(limit: 60)` devuelve etiquetas y tipo (`COURSE`, `CATEGORY`, `INSTITUTION`) de oferta pública, con máximo 60 entradas, sin registros completos. En producción el backend seleccionará ese índice acotado; una consulta sin coincidencias allí todavía puede encontrar cursos en la búsqueda completa. El navegador filtra las etiquetas sin distinguir tildes y envía la selección como `q` a la búsqueda GraphQL existente. Si falla esa consulta auxiliar, se conserva el buscador libre sin sugerencias ni sustitución por fixtures; las consultas principales mantienen sus estados de error. No es una API REST ni una descarga del catálogo. La búsqueda del perfil usa exclusivamente `institutionCourses(id)`; para instituciones con catálogos grandes se mantiene pendiente paginar y filtrar esa operación en servidor.
 
 Configurar en `.env.local` o secretos del alojamiento: `DATA_SOURCE=graphql`, `GRAPHQL_ENDPOINT`, `SITE_URL`. Ninguna variable secreta lleva prefijo `NEXT_PUBLIC_`. La API pública de lectura no requiere en este borrador una clave de servicio; si el equipo exige una, guardarla sólo en servidor e implementar su rotación. No incrustar secretos en URL ni documentación.
 
