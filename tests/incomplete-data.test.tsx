@@ -24,6 +24,7 @@ const incomplete = courseSchema.parse({
   id: "synthetic-pending",
   title: "Propuesta pendiente",
   demo: false,
+  rating: null,
   versionId: "synthetic-version",
   versionNumber: 1,
   category: null,
@@ -89,6 +90,8 @@ describe("información incompleta", () => {
     expect(html).toContain("Carga horaria por confirmar");
     expect(html).toContain("Sin evaluación institucional publicada");
     expect(html).not.toContain("ARS");
+    expect(html).toContain("Sin valoraciones todavía");
+    expect(html).not.toContain("demo-rating-label");
     expect(
       renderToStaticMarkup(
         <InstitutionLogo institution={incomplete.institution} />,

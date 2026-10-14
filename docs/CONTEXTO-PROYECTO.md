@@ -111,3 +111,13 @@ El contrato v0.2 distingue curso/versiones, categorías dinámicas, módulos est
 ## Ejecución con Docker
 
 Se incorporaron Dockerfile, compose.yaml, compose.dev.yaml y una lista permitida en .dockerignore. `docker compose up -d --build --wait` sirve la demo en localhost:3010. El frontend no monta secretos ni depende del Observatorio. Existe un servicio opcional de auditoría CLI en el perfil tools, con el secreto local montado en lectura. El modo de desarrollo usa recarga de código desde Windows; ver [operación Docker](DOCKER.md). No se implementaron servicios C# o MySQL nuevos ni cambió el stack acordado.
+
+## Exploración visual desde localhost
+
+Por pedido del usuario se creó `explore/marketplace-frontend` desde `localhost` (`c8bc4ec`) para acercar la experiencia a Mercado Libre, conservando los colores e identidad de Cámara. Incluye una primera propuesta de portada, búsqueda, catálogo en tarjetas/lista y ficha. Ver [alcance y recorridos de revisión](EXPLORACION-MARKETPLACE.md). Las decisiones de dominio, integración, publicación y demostración documentadas arriba siguen vigentes.
+
+## Mejoras y valoraciones de ejemplo (11/10/2026)
+
+El usuario aprobó implementar una portada más directa, sugerencias de búsqueda, lista inicial en resultados, tarjetas más simples, resumen útil de curso, vidriera institucional con búsqueda y filtros móviles accesibles. Autorizó estrellas y puntuación con datos de ejemplo claramente identificados. Se implementan cinco opiniones ficticias por curso valorado, distribución y promedio; un curso mantiene el estado sin opiniones. Las valoraciones no representan evidencia real ni cambian el sello institucional o la relevancia. El contrato propuesto v0.3 agrega campos nuevos pendientes de fuente y política de publicación.
+
+**No hacer commits sin un pedido explícito del usuario.** El 14/10/2026 el usuario solicitó confirmar esta segunda iteración en `explore/marketplace-frontend`, sobre `3edf22d`. El push queda a su cargo.

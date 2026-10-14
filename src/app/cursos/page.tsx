@@ -15,18 +15,24 @@ export async function generateMetadata({ searchParams }: Props) {
   );
 }
 export default async function Courses({ searchParams }: Props) {
-  const filters = parseFilters(await searchParams);
+  const params = await searchParams;
+  const filters = parseFilters(params);
   return (
-    <div className="container page">
+    <div className="container page catalog-page">
       <Breadcrumbs items={[{ label: "Cursos" }]} />
       <div className="page-heading">
-        <span className="eyebrow">ENCONTRÁ TU PRÓXIMO PASO</span>
-        <h1>Un curso para lo que querés lograr.</h1>
-        <p>
-          Buscá por tema o habilidad y encontrá una propuesta que vaya con vos.
-        </p>
+        <h1>
+          {filters.q
+            ? `Resultados para “${filters.q}”`
+            : "Explorá todos los cursos"}
+        </h1>
+        <p>Elegí por tema, modalidad e institución.</p>
       </div>
-      <Catalog key={JSON.stringify(filters)} filters={filters} />
+      <Catalog
+        key={JSON.stringify(params)}
+        filters={filters}
+        view={params.view === "grid" ? "grid" : "list"}
+      />
     </div>
   );
 }

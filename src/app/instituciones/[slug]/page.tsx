@@ -11,26 +11,44 @@ import {
 import { getInstitution, getRepository } from "@/data/repository";
 import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
 import { config } from "@/lib/config";
-import { institutionLocation } from "@/domain/catalog";
-type Props = { params: Promise<{ slug: string }> };
-export async function generateMetadata({ params }: Props) {
+import { institutionLocation, categoryName } from "@/domain/catalog";
+import { searchCourses } from "@/domain/search";
+type Props = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
+export async function generateMetadata({ params, searchParams }: Props) {
   const institution = await getInstitution((await params).slug);
   if (!institution) notFound();
   return pageMetadata(
     institution.name,
     institution.description ?? `Oferta de ${institution.name}`,
     `/instituciones/${institution.slug}`,
-    institution.demo,
+    institution.demo || Object.keys(await searchParams).length > 0,
   );
 }
-export default async function InstitutionPage({ params }: Props) {
+export default async function InstitutionPage({ params, searchParams }: Props) {
   const institution = await getInstitution((await params).slug);
   if (!institution) notFound();
   const courses = await (
     await getRepository()
   ).institutionCourses(institution.id);
+  const query = await searchParams;
+  const q = typeof query.q === "string" ? query.q.slice(0, 160).trim() : "";
+  const category = typeof query.category === "string" ? query.category : "";
+  const filtered = searchCourses(courses, { q, category });
+  const areas = [
+    ...new Map(
+      courses
+        .filter((c) => c.category)
+        .map((c) => [c.category!, categoryName(c)]),
+    ).entries(),
+  ];
+  const path = `/instituciones/${institution.slug}`;
+  const areaUrl = (area: string) =>
+    `${path}?${new URLSearchParams({ ...(q ? { q } : {}), ...(area ? { category: area } : {}) })}#oferta`;
   return (
-    <div className="container page">
+    <div className="container page institution-store">
       <Breadcrumbs
         items={[
           { label: "Instituciones", href: "/instituciones" },
@@ -69,6 +87,10 @@ export default async function InstitutionPage({ params }: Props) {
         <div>
           <span className="eyebrow">{institution.specialty}</span>
           <h1>{institution.name}</h1>
+          <p className="store-description">
+            {institution.description ??
+              "Presentación institucional pendiente de completar."}
+          </p>
           <div className="detail-meta">
             <span>
               <MapPin size={18} aria-hidden />
@@ -82,9 +104,97 @@ export default async function InstitutionPage({ params }: Props) {
               </span>
             )}
           </div>
+          <div className="store-links">
+            <a href="#oferta" className="text-link">
+              Ver sus {courses.length} cursos
+            </a>
+            <a href="#institucion" className="text-link">
+              Sobre la institución y su sello
+            </a>
+            {institution.demo && (
+              <span className="demo-rating-label">Institución de ejemplo</span>
+            )}
+          </div>
         </div>
       </div>
-      <div className="institution-layout">
+      <section className="section store-offer" id="oferta">
+        <div className="section-heading">
+          <div>
+            <h2>Cursos de {institution.name}</h2>
+            <p>
+              {filtered.length} de {courses.length} propuestas
+              {institution.demo && " de demostración"}.
+            </p>
+          </div>
+        </div>
+        <form
+          className="institution-search"
+          action={`${path}#oferta`}
+          role="search"
+          aria-label="Buscar dentro de la institución"
+        >
+          <label htmlFor="institution-query">Buscá en esta institución</label>
+          <div>
+            <input
+              key={q}
+              id="institution-query"
+              type="search"
+              name="q"
+              defaultValue={q}
+              maxLength={160}
+              placeholder="Curso o habilidad"
+            />
+            {category && (
+              <input type="hidden" name="category" value={category} />
+            )}
+            <button className="button" type="submit">
+              Buscar
+            </button>
+          </div>
+        </form>
+        {areas.length > 0 && (
+          <nav
+            className="institution-areas"
+            aria-label="Áreas de esta institución"
+          >
+            <Link
+              href={areaUrl("")}
+              aria-current={!category ? "page" : undefined}
+            >
+              Todas las áreas
+            </Link>
+            {areas.map(([slug, name]) => (
+              <Link
+                key={slug}
+                href={areaUrl(slug)}
+                aria-current={category === slug ? "page" : undefined}
+              >
+                {name}
+              </Link>
+            ))}
+          </nav>
+        )}
+        {filtered.length ? (
+          <CourseGrid courses={filtered} />
+        ) : (
+          <div className="empty-state">
+            <h3>
+              {courses.length
+                ? "No encontramos cursos con esa búsqueda"
+                : "Sin cursos activos por el momento"}
+            </h3>
+            <Link
+              href={courses.length ? `${path}#oferta` : "/cursos"}
+              className="button secondary"
+            >
+              {courses.length
+                ? "Ver toda su oferta"
+                : "Explorar otras propuestas"}
+            </Link>
+          </div>
+        )}
+      </section>
+      <div className="institution-layout" id="institucion">
         <div>
           <section className="detail-section">
             <h2>Formación con una mirada propia</h2>
@@ -128,28 +238,6 @@ export default async function InstitutionPage({ params }: Props) {
         </div>
         <Credential institution={institution} full />
       </div>
-      <section className="section">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">EXPLORÁ SU PROPUESTA</span>
-            <h2>Cursos de {institution.name}</h2>
-            <p>
-              {courses.length} propuestas disponibles en el catálogo
-              {institution.demo && " de demostración"}.
-            </p>
-          </div>
-        </div>
-        {courses.length ? (
-          <CourseGrid courses={courses} />
-        ) : (
-          <div className="empty-state">
-            <h3>Sin cursos activos por el momento</h3>
-            <Link href="/cursos" className="button secondary">
-              Explorar otras propuestas
-            </Link>
-          </div>
-        )}
-      </section>
     </div>
   );
 }

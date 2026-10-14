@@ -4,11 +4,12 @@ import {
   categorySchema,
   courseSchema,
   institutionSchema,
+  searchSuggestionSchema,
   type CatalogRepository,
 } from "@/domain/catalog";
 import { graphqlRequest } from "./client";
 const institutionFields = `id slug name description specialty city province foundedYear memberSince logo demo website socials { network url } assessment { level stage rationale reviewedAt methodologyVersion }`;
-const courseFields = `id versionId versionNumber slug title category categoryLabel status mode location hours weeks price currency difficulty description modules { id title content order } objectives audience outcomes skills project evaluation prerequisites certificate { label issuerName chamberIssued } cover coverAlt updatedAt demo video { youtubeId title author demo } institution { ${institutionFields} }`;
+const courseFields = `id versionId versionNumber slug title category categoryLabel status mode location hours weeks price currency difficulty description modules { id title content order } objectives audience outcomes skills project evaluation prerequisites certificate { label issuerName chamberIssued } cover coverAlt updatedAt demo rating { average count demo distribution { stars count } reviews { id score authorLabel comment } } video { youtubeId title author demo } institution { ${institutionFields} }`;
 export function graphqlRepository(endpoint: string): CatalogRepository {
   const request = <T>(
     query: string,
@@ -16,6 +17,17 @@ export function graphqlRepository(endpoint: string): CatalogRepository {
     schema: z.ZodType<T>,
   ) => graphqlRequest(endpoint, query, variables, schema);
   return {
+    async searchSuggestions() {
+      return (
+        await request(
+          `query SearchSuggestions { searchSuggestions(limit: 60) { label kind } }`,
+          {},
+          z.object({
+            searchSuggestions: searchSuggestionSchema.array().max(60),
+          }),
+        )
+      ).searchSuggestions;
+    },
     async categories() {
       return (
         await request(
