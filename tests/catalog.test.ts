@@ -23,7 +23,8 @@ describe("datos de demostración", () => {
   });
   it("no mezcla reseñas ficticias con datos públicos", () => {
     for (const c of courses) {
-      expect(c).not.toHaveProperty("rating");
+      expect(c.demo).toBe(true);
+      if (c.rating) expect(c.rating.demo).toBe(true);
       expect(c.institution).not.toHaveProperty("scores");
     }
   });

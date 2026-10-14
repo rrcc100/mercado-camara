@@ -1,4 +1,5 @@
-# BORRADOR v0.2 — auditoría real del 2026-10-07. Ver camara/MAPEO-PORTAL.md.
+# BORRADOR v0.3 — base auditada el 2026-10-07; valoraciones y sugerencias propuestas el 2026-10-11.
+# Las valoraciones no provienen de la base auditada. Ver BACKEND-GRAPHQL.md.
 # No existe servidor GraphQL implementado. La publicación es independiente de Approved/Active.
 # Las queries públicas coinciden con src/data/graphql/repository.ts.
 scalar DateTime
@@ -116,7 +117,39 @@ type Course {
   coverAlt: String
   video: Video
   updatedAt: DateTime
+  # null sin valoraciones publicadas; nunca representar ausencia como 0 estrellas.
+  rating: CourseRating
   demo: Boolean!
+}
+type CourseRating {
+  # Media ponderada, redondeada a un decimal, entre 1 y 5.
+  average: Float!
+  count: Int!
+  # Exactamente cinco filas únicas (1 a 5); sus cantidades suman count.
+  distribution: [RatingBucket!]!
+  # Hasta cinco comentarios públicos; no descargar el historial completo.
+  reviews: [CourseReview!]!
+  demo: Boolean!
+}
+type RatingBucket {
+  stars: Int!
+  count: Int!
+}
+type CourseReview {
+  id: ID!
+  score: Int!
+  # Alias público autorizado, sin identificador de alumno ni contacto.
+  authorLabel: String!
+  comment: String!
+}
+enum SearchSuggestionKind {
+  COURSE
+  CATEGORY
+  INSTITUTION
+}
+type SearchSuggestion {
+  label: String!
+  kind: SearchSuggestionKind!
 }
 input CatalogFilterInput {
   q: String
@@ -141,6 +174,8 @@ type PublishedSlugs {
   institutions: [String!]!
 }
 type Query {
+  # Índice acotado de etiquetas públicas; máximo 60. No es el catálogo completo.
+  searchSuggestions(limit: Int = 60): [SearchSuggestion!]!
   categories: [Category!]!
   catalog(filter: CatalogFilterInput!): CatalogResult!
   course(slug: String!): Course

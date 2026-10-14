@@ -27,9 +27,10 @@ export default async function Category({ params, searchParams }: Props) {
       (c) => c.slug === slug,
     );
   if (!category) notFound();
-  const filters = { ...parseFilters(await searchParams), category: slug };
+  const query = await searchParams;
+  const filters = { ...parseFilters(query), category: slug };
   return (
-    <div className="container page">
+    <div className="container page catalog-page">
       <Breadcrumbs
         items={[{ label: "Cursos", href: "/cursos" }, { label: category.name }]}
       />
@@ -42,8 +43,9 @@ export default async function Category({ params, searchParams }: Props) {
         </p>
       </div>
       <Catalog
-        key={JSON.stringify(filters)}
+        key={JSON.stringify(query)}
         filters={filters}
+        view={query.view === "grid" ? "grid" : "list"}
         fixedCategory={slug}
         basePath={`/categorias/${slug}`}
       />
